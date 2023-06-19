@@ -54,7 +54,8 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vim-interaction)
+export NVM_LAZY=1
+plugins=(vim-interaction nvm)
 
 # User configuration
 
@@ -124,28 +125,12 @@ alias yb='yarn build'
 alias yyb='yarn && yarn build'
 alias ybt='yarn build:turbo'
 alias tw='yarn test:watch'
-function yw() {
-  yarn workspace @grandvisionhq/$@
-}
-function yww() {
-  yarn workspace @grandvisionhq/$1 watch
-}
-
 alias du='du -h'
 alias df='df -h'
 
 alias tmux='TERM=screen-256color tmux'
 
 alias mux='tmuxinator'
-
-alias utils='source ~/Source/GrandVision/my/tools/utils.sh'
-alias vimutils='vim ~/Source/GrandVision/my/tools/utils.sh'
-
-#alias tree='exa -T $1 --color=always | less -r'
-
-export NVM_DIR="/Users/cas/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
 
 eval "$(thefuck --alias)"
 eval "$(pyenv init -)"
@@ -158,6 +143,7 @@ export KEYTIMEOUT=1
 # other parts of config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.keys.sh ] && source ~/.keys.sh
+[ -f ~/.gv.zsh ] && source ~/.gv.zsh
 
 # colors
 . ~/.config/rose-pine.sh
