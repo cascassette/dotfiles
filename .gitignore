@@ -1,0 +1,12 @@
+/config/nvim/plugin
+/config/ranger/plugins
+/config/ranger/history
+
+# has to come from git as well
+/tmux/themes/nord-tmux/
+
+__pycache__
+*.pyo
+*.py.old
+
+.DS_Store
