@@ -10,6 +10,9 @@ require('nvim-tree').setup({
    filters = {
       dotfiles = true,
    },
+   git = {
+      show_on_dirs = false,
+   },
    on_attach = function(bufnr)
       local api = require 'nvim-tree.api'
       local function opts(desc)
