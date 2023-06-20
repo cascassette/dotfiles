@@ -25,6 +25,7 @@ alias o='less'
 alias x='exit'
 alias d='lsd'
 alias e=$EDITOR
+alias e.=$EDITOR .
 
 alias gs='git status -sb'
 alias gd='git diff'
