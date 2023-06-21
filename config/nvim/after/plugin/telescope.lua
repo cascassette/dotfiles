@@ -21,12 +21,12 @@ require('telescope').setup({
    defaults = {
       mappings = {
          i = {
-            -- TODO: send all to qflist
             ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
+            ['œ'] = actions.send_to_qflist + actions.open_qflist,
          },
          n = {
-            -- TODO: send all to qflist
             ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
+            ['œ'] = actions.send_to_qflist + actions.open_qflist,
          },
       },
    },
