@@ -55,5 +55,4 @@ vim.keymap.set('n', '<Esc>', function() vim.opt.hls = false end)
 vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', '¨', vim.cmd.cn)
 
---vim.keymap.set('n', '°', '')
--- nnoremap ° :Ack! <C-R><C-W><CR>
+vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
