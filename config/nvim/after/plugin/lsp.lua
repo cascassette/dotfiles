@@ -32,7 +32,7 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action, opts)
 	vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, opts)
 	vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename, opts)
-   vim.keymap.set('n', '<leader>dqf', function() vim.diagnostic.setqflist() vim.cmd.copen() end, opts)
+   vim.keymap.set('n', '<leader>dh', vim.diagnostic.hide, opts)
 
 	--vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
 	--vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
