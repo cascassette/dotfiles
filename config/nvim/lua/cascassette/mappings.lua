@@ -49,10 +49,12 @@ vim.keymap.set('n', '<C-w>s', vim.cmd.vsplit)
 vim.keymap.set('n', '<C-w>-', vim.cmd.split)
 
 -- turn off hlsearch when pressing esc again in normal mode
-vim.keymap.set('n', '<Esc>', function() vim.opt.hls = false end)
+vim.keymap.set('n', '<Esc>', function() vim.opt.hlsearch = false end)
 
 -- use shift-alt-a/u for :cnext and :cprev
 vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', '¨', vim.cmd.cn)
 
 vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
+
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
