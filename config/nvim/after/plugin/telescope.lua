@@ -7,7 +7,9 @@ vim.keymap.set('n', '<leader>/', builtin.live_grep)
 vim.keymap.set('n', '<leader>b', builtin.buffers)
 vim.keymap.set('n', '<leader>m', builtin.jumplist)
 vim.keymap.set('n', '<leader>w', builtin.marks)
--- non-live grep
+vim.keymap.set('n', '<leader>r', function() builtin.oldfiles({ only_cwd = true }) end)    -- think r for "recent"
+vim.keymap.set('n', '<leader>R', builtin.oldfiles)                                        -- think r for "recent"
+-- non-live grep, think s for search
 vim.keymap.set('n', '<leader>s', function()
 	builtin.grep_string({ search = vim.fn.input('Grep > ') })
 end)
