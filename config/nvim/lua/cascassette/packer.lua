@@ -25,7 +25,7 @@ return require('packer').startup({ function(use)
    -- Not for now, going to try nvim-tree
    use 'kelly-lin/ranger.nvim'
 
-   use 'jeetsukumaran/vim-indentwise'
+   use 'cascassette/vim-indentwise'
 
    use 'elzr/vim-json'
 
