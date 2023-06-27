@@ -27,6 +27,9 @@ alias d='lsd'
 alias e=$EDITOR
 alias e.='$EDITOR .'
 
+alias dlat='d -lat'
+alias late='d -lat'
+
 alias gs='git status -sb'
 alias gd='git diff'
 alias gds='git diff --staged'
@@ -35,7 +38,7 @@ alias ga.='git add .'
 alias gac='git add . && git commit'
 alias gc='git commit'
 alias gl='git log'
-alias gb='git branch'
+alias gb='git branch --sort=-committerdate'
 alias gm='git merge'
 alias gf='git fetch'
 alias gfa='git fetch --all'
