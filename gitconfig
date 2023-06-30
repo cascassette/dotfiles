@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+name = Casper Ravenhorst
+email = casper@sinedub.io
+[pull]
+	rebase = false
+[pager]
+	branch = false
+[alias]
+	unadd = reset HEAD --
+	pickable = log --oneline --cherry-pick --right-only --reverse
+[push]
+  autoSetupRemote = true
