@@ -22,7 +22,6 @@ return require('packer').startup({ function(use)
 
 	use 'tpope/vim-fugitive'
 
-   -- Not for now, going to try nvim-tree
    use 'kelly-lin/ranger.nvim'
 
    use 'cascassette/vim-indentwise'
