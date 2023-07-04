@@ -21,6 +21,7 @@ return require('packer').startup({ function(use)
 	use 'mbbill/undotree'
 
 	use 'tpope/vim-fugitive'
+	use 'tpope/vim-rhubarb'
 
    use 'kelly-lin/ranger.nvim'
 
