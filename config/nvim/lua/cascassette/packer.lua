@@ -45,6 +45,8 @@ return require('packer').startup({ function(use)
    use 'folke/zen-mode.nvim'
    use 'folke/twilight.nvim'
 
+   use 'tzachar/highlight-undo.nvim'
+
    use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
