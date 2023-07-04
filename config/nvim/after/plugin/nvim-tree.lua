@@ -5,6 +5,8 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
+vim.g.nvim_tree_follow = 1
+
 require('nvim-tree').setup({
    view = {
       width = 30,
@@ -16,7 +18,6 @@ require('nvim-tree').setup({
       show_on_dirs = false,
    },
    on_attach = function(bufnr)
-      local api = require 'nvim-tree.api'
       local function opts(desc)
          return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, nowait = true }
       end
