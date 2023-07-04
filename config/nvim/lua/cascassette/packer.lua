@@ -42,6 +42,9 @@ return require('packer').startup({ function(use)
 
    use 'windwp/nvim-ts-autotag'
 
+   use 'folke/zen-mode.nvim'
+   use 'folke/twilight.nvim'
+
    use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
