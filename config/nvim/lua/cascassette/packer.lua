@@ -37,6 +37,9 @@ return require('packer').startup({ function(use)
 
    use 'nvim-tree/nvim-tree.lua'
 
+   -- Because nvim-tree has that nasty behaviour for :bd
+   use 'qpkorr/vim-bufkill'
+
    use 'windwp/nvim-ts-autotag'
 
    use {

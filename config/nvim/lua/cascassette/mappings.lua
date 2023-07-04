@@ -1,3 +1,5 @@
+vim.g.BufKillCreateMappings = 0
+
 vim.g.mapleader = ','
 
 -- swap j/k keys with +/-
@@ -15,10 +17,9 @@ vim.keymap.set('n', '<Right>', '10zl')
 -- cycle windows
 vim.keymap.set('n', '<Tab>', '<C-w>w')
 
--- cycle buffers, quit buffer
+-- cycle buffers
 vim.keymap.set('n', 'H', vim.cmd.bprev)
 vim.keymap.set('n', 'L', vim.cmd.bnext)
-vim.keymap.set('n', 'X', vim.cmd.bd)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
 
