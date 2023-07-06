@@ -33,7 +33,7 @@ require('nvim-tree').setup({
    end,
 })
 
-vim.keymap.set('n', '<C-a>', vim.cmd.NvimTreeFindFile)
+vim.keymap.set('n', '<C-a>', vim.cmd.NvimTreeFindFileToggle)
 
 -- nvim-tree.lua default mappings:
 -- <2-LeftMouse>  Open                  
