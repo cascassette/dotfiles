@@ -1,13 +1,10 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/cas/.oh-my-zsh
-
 export EDITOR=nvim
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="casperzak"
-ZSH_THEME="casperzak-2"
+#ZSH_THEME="casperzak-2"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -18,7 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 export NVM_LAZY=1
 plugins=(vim-interaction nvm)
 
-source $ZSH/oh-my-zsh.sh
+eval "$(oh-my-posh init zsh --config ~/.cascassette.omp.json)"
 
 alias c='clear'
 alias o='less'
@@ -27,6 +24,7 @@ alias d='lsd'
 alias e=$EDITOR
 alias e.='$EDITOR .'
 
+alias da='d -a'
 alias dlat='d -lat'
 alias late='d -lat'
 
@@ -44,8 +42,8 @@ alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gpl='git pull'
 alias gplu='git pull upstream master --rebase'
-alias gps='git push --no-verify'
-#alias gps='git push'
+#alias gps='git push --no-verify'
+alias gps='git push'
 alias gco='git checkout'
 alias gch='git checkout HEAD --'
 alias gcl='git clone'
@@ -74,12 +72,12 @@ alias tw='yarn test:watch'
 alias du='du -h'
 alias df='df -h'
 
-alias tmux='TERM=screen-256color tmux'
+#alias tmux='TERM=screen-256color tmux'
 
-alias mux='tmuxinator'
+#alias mux='tmuxinator'
 
-eval "$(thefuck --alias)"
-eval "$(pyenv init -)"
+#eval "$(thefuck --alias)"
+#eval "$(pyenv init -)"
 
 # vim mode
 bindkey -v
@@ -92,7 +90,7 @@ export KEYTIMEOUT=1
 [ -f ~/.gv.zsh ] && source ~/.gv.zsh
 
 # colors
-. ~/.config/rose-pine.sh
+#. ~/.config/rose-pine.sh
 
 # for ranger custom config
 export RANGER_LOAD_DEFAULT_RC="FALSE"
