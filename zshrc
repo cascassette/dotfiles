@@ -97,4 +97,4 @@ export KEYTIMEOUT=1
 # for ranger custom config
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
-source /Users/cas/.config/broot/launcher/bash/br
+#source /Users/cas/.config/broot/launcher/bash/br
