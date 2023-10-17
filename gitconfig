@@ -1,0 +1,28 @@
+# This is Git's per-user configuration file.
+[core]
+	excludesFile = /Users/cas/.gitignore
+   pager = delta
+[user]
+   name = Casper Ravenhorst
+   email = casper@sinedub.io
+[pull]
+	rebase = false
+#[pager]
+   #branch = false
+[alias]
+	unadd = reset HEAD --
+	pickable = log --oneline --cherry-pick --right-only --reverse
+[push]
+   autoSetupRemote = true
+[interactive]
+   diffFilter = delta --color-only
+[delta]
+   hyperlinks = true
+   navigate = true
+   light = false
+   side-by-side = true
+   line-numbers = true
+[merge]
+   conflictstyle = diff3
+[diff]
+   colorMoved = default

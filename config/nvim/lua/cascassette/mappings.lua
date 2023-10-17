@@ -1,3 +1,5 @@
+vim.g.BufKillCreateMappings = 0
+
 vim.g.mapleader = ','
 
 -- swap j/k keys with +/-
@@ -15,10 +17,9 @@ vim.keymap.set('n', '<Right>', '10zl')
 -- cycle windows
 vim.keymap.set('n', '<Tab>', '<C-w>w')
 
--- cycle buffers, quit buffer
+-- cycle buffers
 vim.keymap.set('n', 'H', vim.cmd.bprev)
 vim.keymap.set('n', 'L', vim.cmd.bnext)
-vim.keymap.set('n', 'X', vim.cmd.bd)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
 
@@ -35,12 +36,6 @@ vim.keymap.set('i', '<LeftMouse>', '<nop>')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
--- auto center on jumpy moves
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-
 -- don't lose old yank buffer because pasting over selection
 vim.keymap.set('x', 'p', "\"_dP")
 
@@ -56,8 +51,8 @@ vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', '¨', vim.cmd.cn)
 
 -- use shift-alt-j/k for next and previous diagnostic
-vim.keymap.set('n', '', vim.diagnostic.goto_next)
-vim.keymap.set('n', 'Ô', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '', vim.diagnostic.goto_prev)
+vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
 
 vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
 

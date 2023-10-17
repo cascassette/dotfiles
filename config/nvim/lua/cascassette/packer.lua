@@ -21,8 +21,8 @@ return require('packer').startup({ function(use)
 	use 'mbbill/undotree'
 
 	use 'tpope/vim-fugitive'
+	use 'tpope/vim-rhubarb'
 
-   -- Not for now, going to try nvim-tree
    use 'kelly-lin/ranger.nvim'
 
    use 'cascassette/vim-indentwise'
@@ -37,7 +37,15 @@ return require('packer').startup({ function(use)
 
    use 'nvim-tree/nvim-tree.lua'
 
+   -- Because nvim-tree has that nasty behaviour for :bd
+   use 'qpkorr/vim-bufkill'
+
    use 'windwp/nvim-ts-autotag'
+
+   use 'folke/zen-mode.nvim'
+   use 'folke/twilight.nvim'
+
+   use 'tzachar/highlight-undo.nvim'
 
    use {
       'nvim-lualine/lualine.nvim',
