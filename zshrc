@@ -4,7 +4,7 @@ export ZSH=/Users/cas/.oh-my-zsh
 export EDITOR=nvim
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Look in ~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="casperzak"
 ZSH_THEME="casperzak-2"
@@ -25,7 +25,9 @@ alias o='less'
 alias x='exit'
 alias d='lsd'
 alias e=$EDITOR
+
 alias e.='$EDITOR .'
+alias sesh='$EDITOR -S sesh.vim'
 
 alias dlat='d -lat'
 alias late='d -lat'
@@ -52,6 +54,7 @@ alias gcl='git clone'
 alias gmm='git merge master'
 alias grh='git reset --hard'
 alias grv='git remote -vvvvv'
+alias gbl='git blame'
 alias lg='lazygit'
 
 alias ni='npm install --save'
@@ -89,10 +92,11 @@ export KEYTIMEOUT=1
 # other parts of config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.keys.sh ] && source ~/.keys.sh
-[ -f ~/.gv.zsh ] && source ~/.gv.zsh
 
 # colors
 . ~/.config/rose-pine.sh
 
 # for ranger custom config
 export RANGER_LOAD_DEFAULT_RC="FALSE"
+
+source /Users/cas/.config/broot/launcher/bash/br
