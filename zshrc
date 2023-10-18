@@ -33,6 +33,7 @@ alias o='less'
 alias x='exit'
 alias d='lsd'
 alias e=$EDITOR
+alias r='joshuto'
 
 alias e.='$EDITOR .'
 alias sesh='$EDITOR -S sesh.vim'
