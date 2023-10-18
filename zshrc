@@ -11,6 +11,12 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
+# to make ... and .... etc work, from https://github.com/knu/zsh-manydots-magic
+autoload -Uz manydots-magic
+manydots-magic
+# added by me
+setopt autocd
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
