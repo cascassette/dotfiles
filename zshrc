@@ -6,6 +6,11 @@ export EDITOR=nvim
 #ZSH_THEME="casperzak"
 #ZSH_THEME="casperzak-2"
 
+# git completion setup, from https://www.oliverspryn.com/blog/adding-git-completion-to-zsh
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
