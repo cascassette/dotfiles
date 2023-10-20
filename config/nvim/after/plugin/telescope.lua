@@ -23,22 +23,16 @@ require('telescope').setup({
    defaults = {
       mappings = {
          i = {
-            -- ctrl+q sends all
-            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
             -- alt+q sends selected
-            ['œ'] = actions.send_selected_to_qflist + actions.open_qflist,
-            -- ctrl+j/k goes forward and back in history
-            ['<C-k>'] = actions.cycle_history_prev,
-            ['<C-j>'] = actions.cycle_history_next,
+            ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
+            -- ctrl+q sends all
+            ['œ'] = actions.send_to_qflist + actions.open_qflist,
          },
          n = {
-            -- ctrl+q sends all
-            ['<C-q>'] = actions.send_to_qflist + actions.open_qflist,
             -- alt+q sends selected
-            ['œ'] = actions.send_selected_to_qflist + actions.open_qflist,
-            -- ctrl+j/k goes forward and back in history
-            ['<C-k>'] = actions.cycle_history_prev,
-            ['<C-j>'] = actions.cycle_history_next,
+            ['<C-q>'] = actions.send_selected_to_qflist + actions.open_qflist,
+            -- ctrl+q sends all
+            ['œ'] = actions.send_to_qflist + actions.open_qflist,
          },
       },
    },

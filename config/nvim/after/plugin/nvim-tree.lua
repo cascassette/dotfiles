@@ -3,8 +3,6 @@ local api = require('nvim-tree.api')
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.opt.termguicolors = true
-
 vim.g.nvim_tree_follow = 1
 
 require('nvim-tree').setup({
@@ -16,6 +14,46 @@ require('nvim-tree').setup({
    },
    git = {
       show_on_dirs = false,
+   },
+   -- see ~/.local/share/nvim/lazy/nvim-tree.lua/lua/nvim-tree.lua:427
+   renderer = {
+      icons = {
+         web_devicons = {
+            file = {
+               enable = false,
+               color = true,
+            },
+            folder = {
+               enable = false,
+               color = true,
+            },
+         },
+         glyphs = {
+            default = "",
+            symlink = ">",
+            bookmark = "b",
+            modified = "M",
+            folder = {
+               arrow_closed = "",
+               arrow_open = "",
+               default = "",
+               open = "",
+               empty = "",
+               empty_open = "",
+               symlink = "",
+               symlink_open = "",
+            },
+            git = {
+               unstaged = "✗",
+               staged = "✓",
+               unmerged = "U",
+               renamed = "➜",
+               untracked = "★",
+               deleted = "D",
+               ignored = "◌",
+            },
+         },
+      },
    },
    on_attach = function(bufnr)
       local function opts(desc)

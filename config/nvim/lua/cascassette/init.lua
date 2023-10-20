@@ -1,3 +1,3 @@
 require('cascassette.mappings')
-require('cascassette.packer')
+require('cascassette.lazy')
 require('cascassette.set')

@@ -37,9 +37,9 @@ vim.opt.termguicolors = true
 
 vim.opt.signcolumn = 'yes'
 
-vim.opt.directory='/Users/cas/tmp/nvimscrap/swap//'
-vim.opt.backupdir='/Users/cas/tmp/nvimscrap/backup//'
-vim.opt.undodir='/Users/cas/tmp/nvimscrap/undo//'
+vim.opt.directory='/Users/casper.ravenhorst/tmp/nvimscrap/swap//'
+vim.opt.backupdir='/Users/casper.ravenhorst/tmp/nvimscrap/backup//'
+vim.opt.undodir='/Users/casper.ravenhorst/tmp/nvimscrap/undo//'
 -- keep undo history per file
 vim.opt.undofile = true
 
