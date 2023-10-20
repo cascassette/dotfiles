@@ -112,3 +112,6 @@ export KEYTIMEOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 #source /Users/cas/.config/broot/launcher/bash/br
+
+# load rust/cargo
+. "$HOME/.cargo/env"
