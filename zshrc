@@ -1,3 +1,6 @@
+# for profiling zsh startup time
+#zmodload zsh/zprof
+
 export EDITOR=nvim
 
 # Set name of the theme to load.
@@ -24,8 +27,11 @@ COMPLETION_WAITING_DOTS="true"
 # ~/.oh-my-zsh/plugins/*)
 # ~/.oh-my-zsh/custom/plugins/
 # example: plugins=(rails git textmate ruby lighthouse)
-export NVM_LAZY=1
-plugins=(vim-interaction nvm)
+export ZSH=~/.zsh
+source $ZSH/antigen.zsh
+export NVM_LAZY_LOAD=true
+antigen bundle lukechilds/zsh-nvm
+antigen apply
 
 eval "$(oh-my-posh init zsh --config ~/.cascassette.omp.json)"
 
@@ -117,6 +123,9 @@ export RANGER_LOAD_DEFAULT_RC="FALSE"
 . "$HOME/.cargo/env"
 
 # load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# for profiling zsh startup time
+#zprof
