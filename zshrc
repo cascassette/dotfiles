@@ -30,6 +30,7 @@ COMPLETION_WAITING_DOTS="true"
 export ZSH=~/.zsh
 source $ZSH/antigen.zsh
 export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=('lazygit')
 antigen bundle lukechilds/zsh-nvm
 antigen apply
 
