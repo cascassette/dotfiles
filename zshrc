@@ -7,7 +7,8 @@ export EDITOR=nvim
 # Look in ~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="casperzak"
-ZSH_THEME="casperzak-2"
+#ZSH_THEME="casperzak-2"
+ZSH_THEME="rose-pine"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -29,7 +30,8 @@ alias e=$EDITOR
 alias e.='$EDITOR .'
 alias sesh='$EDITOR -S sesh.vim'
 
-alias dlat='d -lat'
+alias da='d -a'
+alias dla='d -la'
 alias late='d -lat'
 
 alias gs='git status -sb'
@@ -45,23 +47,26 @@ alias gm='git merge'
 alias gf='git fetch'
 alias gfa='git fetch --all'
 alias gpl='git pull'
-alias gplu='git pull upstream master --rebase'
-alias gps='git push --no-verify'
-#alias gps='git push'
+alias gplu='git pull upstream main --rebase'
+alias gps='git push'
+#alias gps='git push --no-verify'
 alias gco='git checkout'
 alias gch='git checkout HEAD --'
 alias gcl='git clone'
-alias gmm='git merge master'
+alias gmm='git merge main'
 alias grh='git reset --hard'
 alias grv='git remote -vvvvv'
 alias gbl='git blame'
 alias lg='lazygit'
+
+alias cr='cargo run'
 
 alias ni='npm install --save'
 alias nid='npm install --save-dev'
 alias nig='npm install --location=global'
 alias ns='npm start'
 alias nr='npm run'
+alias nrd='npm run dev'
 alias nfe='npm run fe'
 alias nbe='npm run be'
 alias nl='npm ls'
@@ -100,3 +105,5 @@ export KEYTIMEOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 source /Users/cas/.config/broot/launcher/bash/br
+
+eval "$(zoxide init zsh)"
