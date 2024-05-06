@@ -36,7 +36,7 @@
                ],
                "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }} ",
                "properties": {
-                  "branch_max_length": 40,
+                  "branch_max_length": 60,
                   "truncate_symbol": "...",
 
                   "fetch_status": true,
