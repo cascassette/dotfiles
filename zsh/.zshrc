@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/cas/.oh-my-zsh
+#export ZSH=/Users/cas/.oh-my-zsh
 
 export EDITOR=nvim
 
@@ -7,18 +7,18 @@ export EDITOR=nvim
 # Look in ~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="casperzak"
-ZSH_THEME="casperzak-2"
+#ZSH_THEME="casperzak-2"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # ~/.oh-my-zsh/plugins/*)
 # ~/.oh-my-zsh/custom/plugins/
 # example: plugins=(rails git textmate ruby lighthouse)
-export NVM_LAZY=1
-plugins=(vim-interaction nvm)
+#export NVM_LAZY=1
+#plugins=(vim-interaction nvm)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 alias c='clear'
 alias o='less'
@@ -99,4 +99,4 @@ export KEYTIMEOUT=1
 # for ranger custom config
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
-source /Users/cas/.config/broot/launcher/bash/br
+#source /Users/cas/.config/broot/launcher/bash/br
