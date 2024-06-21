@@ -1,24 +1,6 @@
-# Path to your oh-my-zsh installation.
-#export ZSH=/Users/cas/.oh-my-zsh
-
 export EDITOR=nvim
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/ and ~/.oh-my-zsh/custom/themes/
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="casperzak"
-#ZSH_THEME="casperzak-2"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-#COMPLETION_WAITING_DOTS="true"
-
-# ~/.oh-my-zsh/plugins/*)
-# ~/.oh-my-zsh/custom/plugins/
-# example: plugins=(rails git textmate ruby lighthouse)
-#export NVM_LAZY=1
-#plugins=(vim-interaction nvm)
-
-#source $ZSH/oh-my-zsh.sh
+eval "$(oh-my-posh init zsh)"
 
 alias c='clear'
 alias o='less'
