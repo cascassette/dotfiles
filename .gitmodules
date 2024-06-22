@@ -1,0 +1,6 @@
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux/.tmux/themes/rose-pine"]
+	path = tmux/.tmux/themes/rose-pine
+	url = git@github.com:cascassette/tmux.git
