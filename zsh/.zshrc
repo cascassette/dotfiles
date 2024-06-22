@@ -23,6 +23,7 @@ alias e.='$EDITOR .'
 alias sesh='$EDITOR -S sesh.vim'
 
 alias da='d -a'
+alias dla='d -la'
 alias late='d -lat'
 
 alias gs='git status -sb'
