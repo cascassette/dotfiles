@@ -59,7 +59,7 @@ alias tw='yarn test:watch'
 alias du='du -h'
 alias df='df -h'
 
-alias tmux='TERM=screen-256color tmux'
+#alias tmux='TERM=screen-256color tmux'
 
 alias mux='tmuxinator'
 
