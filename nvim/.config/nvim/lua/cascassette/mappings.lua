@@ -17,9 +17,10 @@ vim.keymap.set('n', '<Right>', '10zl')
 -- cycle windows
 vim.keymap.set('n', '<Tab>', '<C-w>w')
 
--- cycle buffers
+-- cycle buffers, quit buffer
 vim.keymap.set('n', 'H', vim.cmd.bprev)
 vim.keymap.set('n', 'L', vim.cmd.bnext)
+vim.keymap.set('n', 'X', vim.cmd.BD)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
 
@@ -51,8 +52,8 @@ vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', '¨', vim.cmd.cn)
 
 -- use shift-alt-j/k for next and previous diagnostic
-vim.keymap.set('n', '', vim.diagnostic.goto_prev)
-vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
+vim.keymap.set('n', '', vim.diagnostic.goto_next)
+vim.keymap.set('n', 'Ô', vim.diagnostic.goto_prev)
 
 vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
 
