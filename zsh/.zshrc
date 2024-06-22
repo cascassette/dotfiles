@@ -2,6 +2,11 @@ export EDITOR=nvim
 
 eval "$(oh-my-posh init zsh)"
 
+# git completion setup, from https://www.oliverspryn.com/blog/adding-git-completion-to-zsh
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+
 alias c='clear'
 alias o='less'
 alias x='exit'
