@@ -96,3 +96,8 @@ export KEYTIMEOUT=1
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 #source /Users/cas/.config/broot/launcher/bash/br
+
+# load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
