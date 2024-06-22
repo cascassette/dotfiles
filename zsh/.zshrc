@@ -6,6 +6,7 @@ eval "$(oh-my-posh init zsh)"
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # to make ... and .... etc work, from https://github.com/knu/zsh-manydots-magic
 autoload -Uz manydots-magic
