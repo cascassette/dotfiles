@@ -1,3 +1,6 @@
+# for profiling zsh startup time
+#zmodload zsh/zprof
+
 export EDITOR=nvim
 
 eval "$(oh-my-posh init zsh)"
@@ -101,3 +104,6 @@ export RANGER_LOAD_DEFAULT_RC="FALSE"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# for profiling zsh startup time
+#zprof
