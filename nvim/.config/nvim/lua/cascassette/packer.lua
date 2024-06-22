@@ -2,26 +2,26 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup({ function(use)
-	use 'wbthomason/packer.nvim'
+   use 'wbthomason/packer.nvim'
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+   use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+   }
 
-	use 'AlexvZyl/nordic.nvim'
+   use 'AlexvZyl/nordic.nvim'
 
-	use({ 'rose-pine/neovim', as = 'rose-pine' })
+   use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-	--use 'nvim-treesitter/playground'
+   --use 'nvim-treesitter/playground'
 
-	use 'mbbill/undotree'
+   use 'mbbill/undotree'
 
-	use 'tpope/vim-fugitive'
-	use 'tpope/vim-rhubarb'
+   use 'tpope/vim-fugitive'
+   use 'tpope/vim-rhubarb'
 
    use 'kelly-lin/ranger.nvim'
 
@@ -56,18 +56,18 @@ return require('packer').startup({ function(use)
    --"let g:prettier#autoformat = 0
    --autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		requires = {
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},             -- Required
-			{                                      -- Optional
-				'williamboman/mason.nvim',
-				run = function()
-					pcall(vim.cmd, 'MasonUpdate')
-				end,
-			},
+   use {
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v2.x',
+      requires = {
+         -- LSP Support
+         {'neovim/nvim-lspconfig'},             -- Required
+         {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+               pcall(vim.cmd, 'MasonUpdate')
+            end,
+         },
          {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
          -- Autocompletion
