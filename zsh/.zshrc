@@ -7,6 +7,12 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 
+# to make ... and .... etc work, from https://github.com/knu/zsh-manydots-magic
+autoload -Uz manydots-magic
+manydots-magic
+# added by me
+setopt autocd
+
 alias c='clear'
 alias o='less'
 alias x='exit'
