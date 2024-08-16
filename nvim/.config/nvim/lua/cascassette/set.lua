@@ -5,9 +5,6 @@ vim.opt.startofline = true
 
 vim.opt.showcmd = true
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -68,3 +65,11 @@ vim.opt.listchars = 'tab:»-,trail:·,eol:¬,nbsp:_'
 --nnoremap <F9> #
 
 vim.opt.updatetime = 50
+
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+local numberToggle = vim.api.nvim_create_augroup("numbertoggle", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, { command = "if &nu && mode() != \"i\" | set rnu   | endif", group = numberToggle })
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" },   { command = "if &nu                    | set nornu | endif", group = numberToggle })
