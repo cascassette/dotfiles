@@ -42,7 +42,8 @@ key-mapping.preset = 'qwerty'
 # Drop it from your config, if you don't like this behavior
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focused-monitor-changed = 'move-mouse monitor-lazy-center'
+on-focus-changed = 'move-mouse window-lazy-center'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -93,7 +94,10 @@ alt-quote = 'layout tiles horizontal vertical'
 alt-shift-quote = 'layout accordion horizontal vertical'
 
 # Toggle between floating and tiling layout
-alt-shift-f = ['layout floating tiling', 'mode main']
+alt-ctrl-f = 'layout floating tiling'
+
+# Fullscreen (seems to still get confused with floating shortcut)
+alt-shift-f = 'layout floating tiling'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
