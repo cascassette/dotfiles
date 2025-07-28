@@ -89,6 +89,8 @@ alias df='df -h'
 
 alias mux='tmuxinator'
 
+alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
+
 eval "$(thefuck --alias)"
 eval "$(pyenv init -)"
 
