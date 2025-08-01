@@ -87,8 +87,6 @@ alias df='df -h'
 
 #alias tmux='TERM=screen-256color tmux'
 
-alias mux='tmuxinator'
-
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 
 eval "$(thefuck --alias)"
