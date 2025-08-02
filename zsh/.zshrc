@@ -10,6 +10,8 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# Add deno completions to search path
+if [[ ":$FPATH:" != *":/Users/cas/.zsh/completions:"* ]]; then export FPATH="/Users/cas/.zsh/completions:$FPATH"; fi
 
 # to make ... and .... etc work, from https://github.com/knu/zsh-manydots-magic
 autoload -Uz manydots-magic
@@ -75,6 +77,9 @@ alias nl='npm ls'
 alias nt='npm test'
 alias bfb='npm run build && git add . && git commit -m "fix: build"'
 
+alias pib='pnpm i && pnpm build'
+alias prs='pnpm run storybook'
+
 alias y='yarn'
 alias ys='yarn start'
 alias yse='yarn serve'
@@ -85,6 +90,7 @@ alias tw='yarn test:watch'
 alias du='du -h'
 alias df='df -h'
 
+alias log='~/logius-tmux.sh'
 #alias tmux='TERM=screen-256color tmux'
 
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
@@ -113,6 +119,9 @@ export RANGER_LOAD_DEFAULT_RC="FALSE"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# load deno
+. "/Users/cas/.deno/env"
 
 # load zoxide
 eval "$(zoxide init zsh)"
