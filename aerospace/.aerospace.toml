@@ -184,6 +184,10 @@ run = ['layout floating', 'move-node-to-workspace 1']
 if.app-id = 'com.citrix.receiver.icaviewer.mac'
 run = 'move-node-to-workspace 1'
 
+[[on-window-detected]]
+if.app-id = 'Cisco-Systems.Spark'
+run = 'move-node-to-workspace 1'
+
 # Workspace 2/M = Music/Terminal/Work
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
