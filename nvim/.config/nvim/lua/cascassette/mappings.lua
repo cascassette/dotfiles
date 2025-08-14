@@ -52,8 +52,8 @@ vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', 'Ë', vim.cmd.cn)
 
 -- use shift-alt-j/k for next and previous diagnostic
-vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
-vim.keymap.set('n', '', vim.diagnostic.goto_prev)
+--vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
+--vim.keymap.set('n', '', vim.diagnostic.goto_prev)
 
 vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
 
