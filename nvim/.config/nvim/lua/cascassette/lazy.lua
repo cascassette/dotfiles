@@ -59,7 +59,7 @@ require('lazy').setup({
 
    'tzachar/highlight-undo.nvim',
 
-   'nvim-lualine/lualine.nvim',
+   'iofq/dart.nvim',
 
    -- Still to be properly configured
    --"let g:prettier#autoformat = 0
