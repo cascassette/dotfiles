@@ -262,3 +262,12 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'net.WerWolv.ImHex'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.snoize.SysExLibrarian'
+run = 'layout floating'
+
