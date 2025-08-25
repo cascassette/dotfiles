@@ -1,4 +1,6 @@
-require('lualine').setup {
+local lualine = require('lualine')
+
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
@@ -12,8 +14,8 @@ require('lualine').setup {
     always_divide_middle = true,
     globalstatus = false,
     refresh = {
-      statusline = 1000,
-      tabline = 1000,
+      statusline = 100,
+      tabline = 100,
       winbar = 1000,
     }
   },
@@ -45,3 +47,5 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+--lualine.hide({ place = { 'tabline' } })
