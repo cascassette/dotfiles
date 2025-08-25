@@ -1,7 +1,6 @@
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
-local action_utils = require('telescope.actions.utils')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files)
 vim.keymap.set('n', '<leader>g', builtin.git_files)
