@@ -4,7 +4,7 @@ local action_state = require('telescope.actions.state')
 
 vim.keymap.set('n', '<leader>f', builtin.find_files)
 vim.keymap.set('n', '<leader>g', builtin.git_files)
-vim.keymap.set('n', '<leader>/', builtin.live_grep)
+vim.keymap.set('n', '<leader>/', function() builtin.live_grep({ additional_args = { "-." } }) end)    -- `-.` arg to rg means include hidden files
 vim.keymap.set('n', '<leader>b', builtin.buffers)
 vim.keymap.set('n', '<leader>m', builtin.jumplist)
 vim.keymap.set('n', '<leader>w', builtin.marks)
@@ -12,7 +12,7 @@ vim.keymap.set('n', '<leader>r', function() builtin.oldfiles({ only_cwd = true }
 vim.keymap.set('n', '<leader>R', builtin.oldfiles)                                        -- think r for "recent"
 -- non-live grep, think s for search
 vim.keymap.set('n', '<leader>s', function()
-	builtin.grep_string({ search = vim.fn.input('Grep > ') })
+	builtin.grep_string({ search = vim.fn.input('Grep > '), additional_args = { "-." } })
 end)
 -- search for word under cursor
 vim.keymap.set('n', '°', builtin.grep_string)
