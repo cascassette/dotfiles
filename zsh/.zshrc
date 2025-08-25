@@ -3,7 +3,7 @@
 
 export EDITOR=nvim
 
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh -c ~/theme.omp.json)"
 
 # git completion setup, from https://www.oliverspryn.com/blog/adding-git-completion-to-zsh
 zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
@@ -78,7 +78,9 @@ alias nt='npm test'
 alias bfb='npm run build && git add . && git commit -m "fix: build"'
 
 alias pib='pnpm i && pnpm build'
+alias pb='pnpm build'
 alias prs='pnpm run storybook'
+alias plf='pnpm run lint-fix'
 
 alias y='yarn'
 alias ys='yarn start'
