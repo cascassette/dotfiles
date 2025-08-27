@@ -22,6 +22,6 @@ require('dart').setup({
     pick = "'p",
     next = '<S-l>',
     prev = '<S-h>',
-    unmark_all = '',
+    unmark_all = "'u",
   },
 })
