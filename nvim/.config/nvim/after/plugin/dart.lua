@@ -4,6 +4,13 @@ require('dart').setup({
   tabline = {
     always_show = true,
     icons = true,
+    order = function(config)
+      local order = {}
+      for i, key in ipairs(vim.list_extend(vim.deepcopy(config.marklist), config.buflist)) do
+        order[key] = i
+      end
+      return order
+    end,
   },
   picker = {
     path_format = ':p:.',
