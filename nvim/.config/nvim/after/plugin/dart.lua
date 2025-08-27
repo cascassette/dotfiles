@@ -13,7 +13,8 @@ require('dart').setup({
     end,
   },
   picker = {
-    path_format = ':p:.',
+    --path_format = ':p:.',
+    path_format = ':t',
   },
   mappings = {
     mark = "''",
