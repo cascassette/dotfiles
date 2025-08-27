@@ -34,6 +34,8 @@ require('lazy').setup({
 
    'tpope/vim-fugitive',
 
+   'lewis6991/gitsigns.nvim',
+
    'kelly-lin/ranger.nvim',
 
    'cascassette/vim-indentwise',
