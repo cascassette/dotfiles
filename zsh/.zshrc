@@ -81,6 +81,7 @@ alias pib='pnpm i && pnpm build'
 alias pb='pnpm build'
 alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
+alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 
 alias y='yarn'
 alias ys='yarn start'
