@@ -3,7 +3,7 @@ require('dart').setup({
   buflist = { 'g', 'c', 'r', 'l' },
   tabline = {
     always_show = true,
-    icons = false,
+    icons = true,
   },
   picker = {
     path_format = ':p:.',

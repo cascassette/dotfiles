@@ -61,7 +61,12 @@ require('lazy').setup({
 
    'tzachar/highlight-undo.nvim',
 
-   'iofq/dart.nvim',
+   {
+     'iofq/dart.nvim',
+     dependencies = {
+       'nvim-tree/nvim-web-devicons',
+     }
+   },
 
    -- Still to be properly configured
    --"let g:prettier#autoformat = 0
