@@ -36,6 +36,8 @@ require('lazy').setup({
 
    'lewis6991/gitsigns.nvim',
 
+   'jakemason/ouroboros',
+
    'kelly-lin/ranger.nvim',
 
    'cascassette/vim-indentwise',

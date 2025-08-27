@@ -20,6 +20,7 @@ vim.keymap.set('n', '<Tab>', '<C-w>w')
 -- cycle buffers, quit buffer
 vim.keymap.set('n', 'H', vim.cmd.bprev)
 vim.keymap.set('n', 'L', vim.cmd.bnext)
+vim.keymap.set('n', 'K', vim.cmd.Ouroboros)
 vim.keymap.set('n', 'X', vim.cmd.BD)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
