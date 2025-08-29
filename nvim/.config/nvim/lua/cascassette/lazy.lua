@@ -4,7 +4,7 @@ require('lazy').setup({
    'hrsh7th/nvim-cmp',
 
    {{
-      'nvim-telescope/telescope.nvim',
+      'cascassette/telescope.nvim',
       -- or                          , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
    }},
