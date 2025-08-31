@@ -66,6 +66,9 @@ require('lazy').setup({
    'folke/twilight.nvim',
    'folke/persistence.nvim',
 
+   'romainl/vim-qf',
+   'TamaMcGlinn/quickfixdd',
+
    'tzachar/highlight-undo.nvim',
 
    {
