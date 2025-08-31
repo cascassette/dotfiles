@@ -38,6 +38,9 @@ require('lazy').setup({
 
    'tpope/vim-fugitive',
 
+   'tpope/vim-rhubarb', -- github support for fugitive
+   'tommcdo/vim-fubitive', -- bitbucket support for fugitive
+
    'lewis6991/gitsigns.nvim',
 
    'jakemason/ouroboros',
