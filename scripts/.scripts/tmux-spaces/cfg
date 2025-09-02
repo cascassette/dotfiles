@@ -1,0 +1,13 @@
+#!/bin/sh
+cd ~/Source/dotfiles
+WINDOW_EXISTS=$(tmux list-windows -F '#{window_name}' | grep -q cfg)
+if [[ "$?" == "0" ]]; then
+  NEW_WINDOW_NAME=cfg2
+else
+  NEW_WINDOW_NAME=cfg
+fi
+#tmux attach -t main:cfg || tmux new-session -s main -n cfg
+tmux new-window -n $NEW_WINDOW_NAME -c ~/Source/dotfiles
+tmux select-window -t :.$NEW_WINDOW_NAME
+sleep 0.2
+#tmux send-keys -t cfg 'e' C-m

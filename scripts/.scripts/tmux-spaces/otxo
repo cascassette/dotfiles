@@ -1,0 +1,7 @@
+#!/bin/sh
+cd ~/Source/otxo
+tmux attach -t main:otxo || tmux new-session -s main -n otxo
+tmux new-window -n 'otxo' -c ~/Source/otxo
+tmux select-window -t otxo
+sleep 0.2
+tmux send-keys -t otxo 'e -S ~/otxo.sesh' C-m

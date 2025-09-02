@@ -29,6 +29,8 @@ alias r='yazi'
 alias e.='$EDITOR .'
 alias sesh='$EDITOR -S sesh.vim'
 
+alias ts='~/.scripts/tmux-spaces.sh'
+
 alias da='d -a'
 alias dla='d -la'
 alias late='d -lat'

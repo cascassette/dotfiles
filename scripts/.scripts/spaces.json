@@ -1,0 +1,32 @@
+[
+  {
+    "name": "rhc",
+    "cwd": "~/Source/logius/rhc",
+    "command": "e"
+  },
+  {
+    "name": "nlds",
+    "cwd": "~/Source/logius/nlds",
+    "command": "e"
+  },
+  {
+    "name": "utr",
+    "cwd": "~/Source/logius/utrecht",
+    "command": "e"
+  },
+  {
+    "name": "otxo",
+    "cwd": "~/Source/otxo",
+    "command": "e"
+  },
+  {
+    "name": "cfg",
+    "cwd": "~/Source/dotfiles",
+    "command": null
+  },
+  {
+    "name": "ytdl",
+    "cwd": "~/Downloads/yt-rips",
+    "command": null
+  }
+]

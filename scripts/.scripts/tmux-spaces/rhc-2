@@ -1,0 +1,9 @@
+#!/bin/sh
+cd ~/Source/logius/rhc
+tmux new-session -s main -n rhc -c ~/Source/logius/rhc $EDITOR
+tmux split-window -t rhc -l 8 -c ~/Source/logius/rhc
+tmux select-window -t rhc.0
+sleep 0.2
+tmux send-keys -t rhc.0 'e' C-m # use 'e -S ~/rhc.sesh' to load session
+tmux send-keys -t rhc.0 ',r'
+tmux send-keys -t rhc.1 'gs' C-m

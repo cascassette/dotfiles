@@ -1,0 +1,6 @@
+#!/bin/sh
+cd ~/Downloads/yt-rips
+tmux new-window -n 'ytdl' -c ~/Downloads/yt-rips 
+tmux select-window -t :ytdl
+sleep 0.2
+tmux send-keys -t ytdl 'yt-dlp -x ""' Esc
