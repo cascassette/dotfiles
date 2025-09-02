@@ -9,6 +9,11 @@ require('lazy').setup({
       requires = { {'nvim-lua/plenary.nvim'} }
    }},
 
+   {
+     'suliatis/jumppack',
+     config = true,
+   },
+
    {{ 'rose-pine/neovim', name = 'rose-pine' }},
 
    {{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }},
