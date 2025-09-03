@@ -88,6 +88,13 @@ require('lazy').setup({
 
    'nvim-mini/mini.statusline',
 
+   {
+     'ivanjermakov/troublesum.nvim',
+     config = function()
+       require("troublesum").setup()
+     end
+   },
+
    -- Still to be properly configured
    --"let g:prettier#autoformat = 0
    --autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
