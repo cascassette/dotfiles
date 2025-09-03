@@ -10,8 +10,6 @@ zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/cas/.zsh/completions:"* ]]; then export FPATH="/Users/cas/.zsh/completions:$FPATH"; fi
 
 # to make ... and .... etc work, from https://github.com/knu/zsh-manydots-magic
 autoload -Uz manydots-magic
@@ -122,9 +120,6 @@ export RANGER_LOAD_DEFAULT_RC="FALSE"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# load deno
-. "/Users/cas/.deno/env"
 
 # load zoxide
 eval "$(zoxide init zsh)"
