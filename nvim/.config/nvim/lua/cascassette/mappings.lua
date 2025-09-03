@@ -18,15 +18,15 @@ vim.keymap.set('n', '<Right>', '10zl')
 vim.keymap.set('n', '<Tab>', '<C-w>w')
 
 -- cycle buffers, quit buffer
-vim.keymap.set('n', 'H', vim.cmd.bprev)
-vim.keymap.set('n', 'L', vim.cmd.bnext)
+--vim.keymap.set('n', 'H', vim.cmd.bprev) -- superseded now by dart.nvim plugin
+--vim.keymap.set('n', 'L', vim.cmd.bnext) -- superseded now by dart.nvim plugin
+vim.keymap.set('n', 'K', vim.cmd.Ouroboros)
 vim.keymap.set('n', 'X', vim.cmd.BD)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
 
---vim.keymap.set('n', '<leader>ev', vim.cmd.edit, '~/.config/nvim/init.lua')
---nnoremap <leader>ev :e $MYVIMRC<CR>
---nnoremap <leader>sv :source $MYVIMRC<CR>
+vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>')
+vim.keymap.set('n', '<leader>sv', ':source $MYVIMRC<CR>')
 --nnoremap <leader>. :cd %:p:h<CR>
 
 -- disable mouse moving of the cursor
@@ -52,8 +52,8 @@ vim.keymap.set('n', 'Å', vim.cmd.cp)
 vim.keymap.set('n', 'Ë', vim.cmd.cn)
 
 -- use shift-alt-j/k for next and previous diagnostic
-vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
-vim.keymap.set('n', '', vim.diagnostic.goto_prev)
+--vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
+--vim.keymap.set('n', '', vim.diagnostic.goto_prev)
 
 vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
 

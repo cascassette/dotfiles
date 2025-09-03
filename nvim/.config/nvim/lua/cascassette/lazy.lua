@@ -4,10 +4,15 @@ require('lazy').setup({
    'hrsh7th/nvim-cmp',
 
    {{
-      'nvim-telescope/telescope.nvim',
+      'cascassette/telescope.nvim',
       -- or                          , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
    }},
+
+   {
+     'suliatis/jumppack',
+     config = true,
+   },
 
    {{ 'rose-pine/neovim', name = 'rose-pine' }},
 
@@ -16,15 +21,19 @@ require('lazy').setup({
    {
      "folke/flash.nvim",
      event = "VeryLazy",
-     ---@type Flash.Config
-     opts = {},
-     -- stylua: ignore
+     opts = {
+       modes = {
+         char = {
+           enabled = false,  -- don't overtake f/F/t/T motions
+         }
+       }
+     },
      keys = {
        { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
        { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-       { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+       --{ "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Operator Search" },
+       --{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
      },
    },
 
@@ -33,6 +42,13 @@ require('lazy').setup({
    'mbbill/undotree',
 
    'tpope/vim-fugitive',
+
+   'tpope/vim-rhubarb', -- github support for fugitive
+   'tommcdo/vim-fubitive', -- bitbucket support for fugitive
+
+   'lewis6991/gitsigns.nvim',
+
+   'jakemason/ouroboros',
 
    'kelly-lin/ranger.nvim',
 
@@ -56,10 +72,21 @@ require('lazy').setup({
 
    'folke/zen-mode.nvim',
    'folke/twilight.nvim',
+   'folke/persistence.nvim',
+
+   'romainl/vim-qf',
+   'TamaMcGlinn/quickfixdd',
 
    'tzachar/highlight-undo.nvim',
 
-   'nvim-lualine/lualine.nvim',
+   {
+     'iofq/dart.nvim',
+     dependencies = {
+       'nvim-tree/nvim-web-devicons',
+     }
+   },
+
+   'nvim-mini/mini.statusline',
 
    -- Still to be properly configured
    --"let g:prettier#autoformat = 0

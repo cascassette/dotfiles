@@ -1,2 +1,2 @@
 -- set alt+z to zenmode
-vim.keymap.set('n', 'Ω', vim.cmd.ZenMode)
+--vim.keymap.set('n', 'Ω', vim.cmd.ZenMode) -- doesn't work with aerospace shortcuts

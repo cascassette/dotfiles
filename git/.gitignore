@@ -10,3 +10,5 @@ __pycache__
 *.py.old
 
 .DS_Store
+
+sesh.vim

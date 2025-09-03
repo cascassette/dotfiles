@@ -3,3 +3,5 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
    command = "PrettierAsync"
 })
 --vim.g.prettier.exec_cmd_path = "~/path/to/cli/prettier"
+--vim.g.prettier.config.config_precedence = "prefer-file"
+vim.cmd("let g:prettier#config#config_precedence='prefer-file'")

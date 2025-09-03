@@ -180,7 +180,7 @@ run = ['layout floating', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 1'
+run = ['layout floating', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.citrix.receiver.nomas'
@@ -188,7 +188,11 @@ run = ['layout floating', 'move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.citrix.receiver.icaviewer.mac'
-run = 'move-node-to-workspace 1'
+run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'Cisco-Systems.Spark'
+run = ['layout floating', 'move-node-to-workspace 1']
 
 # Workspace 2/M = Music/Terminal/Work
 [[on-window-detected]]
@@ -238,15 +242,27 @@ if.app-id = 'com.apple.AddressBook'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.hicknhacksoftware.MacPass'
-run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'com.culturedcode.ThingsMac'
+if.app-id = 'com.juce.audiopluginhost'
 run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.stairways.keyboardmaestro.editor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'net.WerWolv.ImHex'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.snoize.SysExLibrarian'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'fr.whitebox.Packages'
 run = 'layout floating'
 
 [[on-window-detected]]
