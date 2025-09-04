@@ -2,31 +2,34 @@
   {
     "name": "rhc",
     "cwd": "~/Source/logius/rhc",
-    "command": "e"
+    "layout": "main-aux",
+    "command": "nvim"
   },
   {
     "name": "nlds",
     "cwd": "~/Source/logius/nlds",
-    "command": "e"
+    "layout": "main-aux",
+    "command": "nvim"
   },
   {
     "name": "utr",
     "cwd": "~/Source/logius/utrecht",
-    "command": "e"
+    "layout": "main-aux",
+    "command": "nvim"
   },
   {
     "name": "otxo",
     "cwd": "~/Source/otxo",
-    "command": "e"
+    "command": ""
   },
   {
     "name": "cfg",
     "cwd": "~/Source/dotfiles",
-    "command": null
+    "command": ""
   },
   {
     "name": "ytdl",
     "cwd": "~/Downloads/yt-rips",
-    "command": null
+    "command": ""
   }
 ]
