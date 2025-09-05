@@ -6,6 +6,16 @@
     "command": "nvim"
   },
   {
+    "name": "cfg",
+    "cwd": "~/Source/dotfiles",
+    "command": ""
+  },
+  {
+    "name": "otxo",
+    "cwd": "~/Source/otxo",
+    "command": ""
+  },
+  {
     "name": "nlds",
     "cwd": "~/Source/logius/nlds",
     "layout": "main-aux",
@@ -18,18 +28,13 @@
     "command": "nvim"
   },
   {
-    "name": "otxo",
-    "cwd": "~/Source/otxo",
-    "command": ""
-  },
-  {
-    "name": "cfg",
-    "cwd": "~/Source/dotfiles",
-    "command": ""
-  },
-  {
     "name": "ytdl",
     "cwd": "~/Downloads/yt-rips",
     "command": "~/.scripts/ytdl.sh"
+  },
+  {
+    "name": "home",
+    "cwd": "~",
+    "command": ""
   }
 ]
