@@ -17,6 +17,13 @@ manydots-magic
 # added by me
 setopt autocd
 
+# https://unix.stackexchange.com/questions/157763/do-we-have-more-history-for-cd#157773
+setopt AUTO_PUSHD                  # pushes the old directory onto the stack
+setopt PUSHD_MINUS                 # exchange the meanings of '+' and '-'
+setopt CDABLE_VARS                 # expand the expression (allows 'cd -2/tmp')
+autoload -U compinit && compinit   # load + start completion
+zstyle ':completion:*:directory-stack' list-colors '=(#b) #([0-9]#)*( *)==95=38;5;12'
+
 alias c='clear'
 alias o='less'
 alias x='exit'
@@ -24,8 +31,7 @@ alias d='lsd'
 alias e=$EDITOR
 alias r='yazi'
 
-alias e.='$EDITOR .'
-alias sesh='$EDITOR -S sesh.vim'
+alias ts='~/.scripts/tmux-spaces.sh'
 
 alias da='d -a'
 alias dla='d -la'
@@ -69,8 +75,6 @@ alias nr='npm run'
 alias nb='npm run build'
 alias nrd='npm run dev'
 alias nrnb='npm run dev -- --ci'
-#alias nfe='npm run fe'
-#alias nbe='npm run be'
 alias nl='npm ls'
 alias nt='npm test'
 alias bfb='npm run build && git add . && git commit -m "fix: build"'
@@ -90,9 +94,6 @@ alias tw='yarn test:watch'
 
 alias du='du -h'
 alias df='df -h'
-
-alias log='~/logius-tmux.sh'
-#alias tmux='TERM=screen-256color tmux'
 
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 

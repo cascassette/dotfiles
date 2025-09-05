@@ -1,0 +1,40 @@
+[
+  {
+    "name": "rhc",
+    "cwd": "~/Source/logius/rhc",
+    "layout": "main-aux",
+    "command": "nvim"
+  },
+  {
+    "name": "cfg",
+    "cwd": "~/Source/dotfiles",
+    "command": ""
+  },
+  {
+    "name": "otxo",
+    "cwd": "~/Source/otxo",
+    "command": ""
+  },
+  {
+    "name": "nlds",
+    "cwd": "~/Source/logius/nlds",
+    "layout": "main-aux",
+    "command": "nvim"
+  },
+  {
+    "name": "utr",
+    "cwd": "~/Source/logius/utrecht",
+    "layout": "main-aux",
+    "command": "nvim"
+  },
+  {
+    "name": "ytdl",
+    "cwd": "~/Downloads/yt-rips",
+    "command": "~/.scripts/ytdl.sh"
+  },
+  {
+    "name": "home",
+    "cwd": "~",
+    "command": ""
+  }
+]
