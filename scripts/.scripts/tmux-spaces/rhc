@@ -1,6 +1,0 @@
-#!/bin/sh
-cd ~/Source/logius/rhc
-tmux attach -t main:rhc || tmux new-session -s main -n rhc
-tmux new-window -n 'rhc' -c ~/Source/logius/rhc
-tmux select-window -t rhc
-sleep 0.2
