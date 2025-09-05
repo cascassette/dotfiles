@@ -45,7 +45,8 @@
           ],
           "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
           "properties": {
-            "branch_max_length": 40,
+            "branch_max_length": 60,
+            "truncate_symbol": "...",
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
