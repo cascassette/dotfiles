@@ -31,9 +31,6 @@ alias d='lsd'
 alias e=$EDITOR
 alias r='yazi'
 
-alias e.='$EDITOR .'
-alias sesh='$EDITOR -S sesh.vim'
-
 alias ts='~/.scripts/tmux-spaces.sh'
 
 alias da='d -a'
@@ -78,8 +75,6 @@ alias nr='npm run'
 alias nb='npm run build'
 alias nrd='npm run dev'
 alias nrnb='npm run dev -- --ci'
-#alias nfe='npm run fe'
-#alias nbe='npm run be'
 alias nl='npm ls'
 alias nt='npm test'
 alias bfb='npm run build && git add . && git commit -m "fix: build"'
@@ -99,9 +94,6 @@ alias tw='yarn test:watch'
 
 alias du='du -h'
 alias df='df -h'
-
-alias log='~/logius-tmux.sh'
-#alias tmux='TERM=screen-256color tmux'
 
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 
