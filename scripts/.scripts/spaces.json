@@ -30,6 +30,6 @@
   {
     "name": "ytdl",
     "cwd": "~/Downloads/yt-rips",
-    "command": ""
+    "command": "~/.scripts/ytdl.sh"
   }
 ]
