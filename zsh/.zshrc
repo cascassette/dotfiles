@@ -95,6 +95,8 @@ alias tw='yarn test:watch'
 alias du='du -h'
 alias df='df -h'
 
+alias werk='open /Applications/Arc.app; open /Applications/iTerm.app; open /Applications/Slack.app; open /Applications/Webex.app; open /Applications/Franz.app; ts rhc'
+
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 
 eval "$(thefuck --alias)"
