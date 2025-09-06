@@ -13,7 +13,7 @@
   {
     "name": "otxo",
     "cwd": "~/Source/otxo",
-    "command": ""
+    "command": "nvim"
   },
   {
     "name": "nlds",
