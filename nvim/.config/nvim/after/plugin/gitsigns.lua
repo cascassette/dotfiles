@@ -4,3 +4,5 @@ require('gitsigns').setup({
     ignore_whitespace = true,
   },
 })
+
+vim.keymap.set('n', '<leader><BS>', ':Gitsigns reset_hunk<CR>')
