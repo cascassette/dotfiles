@@ -33,6 +33,13 @@
     "command": "~/.scripts/ytdl.sh"
   },
   {
+    "name": "sdio",
+    "cwd": "~/Source/website",
+    "layout": "main-aux",
+    "command": "nvim",
+    "aux-command": "npm run dev"
+  },
+  {
     "name": "home",
     "cwd": "~",
     "command": ""
