@@ -28,6 +28,12 @@
     "command": "nvim"
   },
   {
+    "name": "lux",
+    "cwd": "~/Source/logius/lux",
+    "layout": "main-aux",
+    "command": "nvim"
+  },
+  {
     "name": "ytdl",
     "cwd": "~/Downloads/yt-rips",
     "command": "~/.scripts/ytdl.sh"
