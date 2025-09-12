@@ -37,10 +37,6 @@ require('lazy').setup({
      },
    },
 
-   --'nvim-treesitter/playground'
-
-   'mbbill/undotree',
-
    'tpope/vim-fugitive',
 
    'tpope/vim-rhubarb', -- github support for fugitive
