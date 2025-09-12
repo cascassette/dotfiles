@@ -43,6 +43,7 @@ for SPACE in $NAME; do
     WORKING_DIR=$(echo $CFG | jq -r '.cwd')
     LAYOUT=$(echo $CFG | jq -r '.layout')
     COMMAND=$(echo $CFG | jq -r '.command')
+    AUX_COMMAND=$(echo $CFG | jq -r '.["aux-command"]')
 
     # Check if there is already a window by that name
     WINDOW_NAME=$SPACE
@@ -57,7 +58,7 @@ for SPACE in $NAME; do
     # Launch tmux session or create a new window in current session
     run "tmux $TMUX_COMMAND -n $WINDOW_NAME -c $WORKING_DIR $COMMAND"
     if [ "$WINDOW_NAME" = "$SPACE" -a "$LAYOUT" = "main-aux" ]; then
-      run "tmux split-window -t $SESSION_NAME:$WINDOW_NAME -l 8 -c $WORKING_DIR"
+      run "tmux split-window -t $SESSION_NAME:$WINDOW_NAME -l 8 -c $WORKING_DIR $AUX_COMMAND"
       run "tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.0"
     fi
     if [[ "$TMUX_NOT_RUNNING" ]]; then
