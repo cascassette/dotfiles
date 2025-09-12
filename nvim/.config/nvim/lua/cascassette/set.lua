@@ -54,9 +54,6 @@ vim.opt.listchars = 'tab:»-,trail:·,eol:¬,nbsp:_'
 --vnoremap ° "zy:Ack! <C-R>z<CR>
 --" Use * in visual mode to search for the selection
 --vnoremap * "zy/<C-r>z<CR>
---" Use shift-alt-a/u for :cnext and :cprev
---nnoremap Å :cp<CR>
---nnoremap ¨ :cn<CR>
 --" search through the project
 --nnoremap <Leader>/ :Ack<Space>
 --" toggle search highlight with ,-

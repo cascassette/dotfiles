@@ -47,9 +47,9 @@ vim.keymap.set('n', '<C-w>-', vim.cmd.split)
 -- turn off hlsearch when pressing esc again in normal mode
 vim.keymap.set('n', '<Esc>', function() vim.opt.hlsearch = false end)
 
--- use shift-alt-a/u for :cnext and :cprev
-vim.keymap.set('n', 'Å', vim.cmd.cp)
-vim.keymap.set('n', 'Ë', vim.cmd.cn)
+-- use alt-j/k for :cnext and :cprev
+vim.keymap.set('n', '∆', vim.cmd.cn)
+vim.keymap.set('n', '˚', vim.cmd.cp)
 
 -- use shift-alt-j/k for next and previous diagnostic
 --vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
