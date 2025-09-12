@@ -37,10 +37,6 @@ require('lazy').setup({
      },
    },
 
-   --'nvim-treesitter/playground'
-
-   'mbbill/undotree',
-
    'tpope/vim-fugitive',
 
    'tpope/vim-rhubarb', -- github support for fugitive
@@ -95,24 +91,20 @@ require('lazy').setup({
      end
    },
 
-   -- Still to be properly configured
-   --"let g:prettier#autoformat = 0
-   --autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
-
    'williamboman/mason.nvim',
 
    {{
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v2.x',
       requires = {
-      -- LSP Support
-      {'neovim/nvim-lspconfig'},             -- Required
-      {                                      -- Optional
-         'williamboman/mason.nvim',
-         run = function()
-            pcall(vim.cmd, 'MasonUpdate')
-         end,
-      },
+         -- LSP Support
+         {'neovim/nvim-lspconfig'},             -- Required
+         {                                      -- Optional
+            'williamboman/mason.nvim',
+            run = function()
+               pcall(vim.cmd, 'MasonUpdate')
+            end,
+         },
          {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
          -- Autocompletion

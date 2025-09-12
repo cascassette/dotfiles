@@ -21,7 +21,6 @@ vim.keymap.set('n', '<Tab>', '<C-w>w')
 --vim.keymap.set('n', 'H', vim.cmd.bprev) -- superseded now by dart.nvim plugin
 --vim.keymap.set('n', 'L', vim.cmd.bnext) -- superseded now by dart.nvim plugin
 vim.keymap.set('n', 'K', vim.cmd.Ouroboros)
-vim.keymap.set('n', 'X', vim.cmd.BD)
 
 vim.keymap.set('n', '<Space>', vim.cmd.write)
 
