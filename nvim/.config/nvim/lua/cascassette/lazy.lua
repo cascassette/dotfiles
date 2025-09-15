@@ -46,8 +46,6 @@ require('lazy').setup({
 
    'jakemason/ouroboros',
 
-   'kelly-lin/ranger.nvim',
-
    'cascassette/vim-indentwise',
 
    'elzr/vim-json',
@@ -81,6 +79,7 @@ require('lazy').setup({
        'nvim-tree/nvim-web-devicons',
      }
    },
+   'mikavilpas/yazi.nvim',
 
    'nvim-mini/mini.statusline',
 
