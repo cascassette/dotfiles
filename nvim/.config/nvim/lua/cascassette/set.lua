@@ -32,7 +32,7 @@ vim.opt.scrolloff = 2
 
 vim.opt.termguicolors = true
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes:1'
 
 vim.opt.directory='/Users/cas/tmp/nvimscrap/swap//'
 vim.opt.backupdir='/Users/cas/tmp/nvimscrap/backup//'

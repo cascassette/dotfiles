@@ -1,115 +1,148 @@
 require('lazy').setup({
-   'nvim-lua/plenary.nvim',
-   'neovim/nvim-lspconfig',
-   'hrsh7th/nvim-cmp',
+   -- lsp, completion
+   {
+      'neovim/nvim-lspconfig',
+      dependencies = {
+         {
+            "folke/lazydev.nvim",
+            ft = "lua", -- only load on lua files
+            opts = {
+               library = {
+                  -- See the configuration section for more details
+                  -- Load luvit types when the `vim.uv` word is found
+                  { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+               },
+            },
+         },
+         {
+            'saghen/blink.cmp',
+            dependencies = { 'rafamadriz/friendly-snippets' },
+            version = '1.*',
+            opts = {
+               keymap = { preset = 'default' },
+               appearance = {
+                  nerd_font_variant = 'mono'
+               },
+               completion = {
+                  trigger = {
+                     show_on_keyword = true,
+                     show_on_trigger_character = true,
+                  },
+                  list = {
+                     selection = {
+                        preselect = false,
+                        auto_insert = false,
+                     },
+                  },
+                  accept = {
+                     dot_repeat = false,
+                     create_undo_point = false,
+                     auto_brackets = {
+                        enabled = false,
+                     },
+                  },
+               },
+               signature = {
+                  enabled = true,
+                  window = {
+                     show_documentation = false,
+                  },
+               },
+            },
+         },
+      },
+      opts = {
+         servers = {
+            lua_ls = {}
+         }
+      },
+      config = function(_, opts)
+         local lspconfig = require('lspconfig')
+         for server, config in pairs(opts.servers) do
+            -- passing config.capabilities to blink.cmp merges with the capabilities in your
+            -- `opts[server].capabilities, if you've defined it
+            config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
+            lspconfig[server].setup(config)
+         end
+      end
+   },
+   {
+      'mason-org/mason.nvim',
+      opts = {},
+   },
+   {{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }},
+   {
+      'ivanjermakov/troublesum.nvim',
+      config = function()
+         require("troublesum").setup()
+      end
+   },
 
+   -- file types
+   'elzr/vim-json',
+   'prettier/vim-prettier',
+
+   -- picker
    {{
       'cascassette/telescope.nvim',
       -- or                          , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
    }},
 
+   -- navigation
    {
-     'suliatis/jumppack',
-     config = true,
+      'suliatis/jumppack',
+      config = true,
    },
-
-   {{ 'rose-pine/neovim', name = 'rose-pine' }},
-
-   {{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }},
-
    {
-     "folke/flash.nvim",
-     event = "VeryLazy",
-     opts = {
-       modes = {
-         char = {
-           enabled = false,  -- don't overtake f/F/t/T motions
+      "folke/flash.nvim",
+      event = "VeryLazy",
+      opts = {
+         modes = {
+            char = {
+               enabled = false,  -- don't overtake f/F/t/T motions
+            }
          }
-       }
-     },
-     keys = {
-       { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
-       { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-       --{ "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
-       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Operator Search" },
-       --{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
-     },
+      },
+      keys = {
+         { "s", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+         { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+         --{ "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
+         { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Operator Search" },
+         --{ "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      },
    },
-
-   'tpope/vim-fugitive',
-
-   'tpope/vim-rhubarb', -- github support for fugitive
-   'tommcdo/vim-fubitive', -- bitbucket support for fugitive
-
-   'lewis6991/gitsigns.nvim',
-
    'jakemason/ouroboros',
-
    'cascassette/vim-indentwise',
-
-   'elzr/vim-json',
-
-   'tpope/vim-surround',
-
-   'hrsh7th/nvim-insx',
-
-   'prettier/vim-prettier',
-
    'christoomey/vim-tmux-navigator',
-
    'nvim-tree/nvim-tree.lua',
-
    'qpkorr/vim-bufkill',
-
-   'windwp/nvim-ts-autotag',
-
-   'folke/zen-mode.nvim',
-   'folke/twilight.nvim',
-   'folke/persistence.nvim',
-
    'romainl/vim-qf',
    'TamaMcGlinn/quickfixdd',
-
    'tzachar/highlight-undo.nvim',
-
    {
-     'iofq/dart.nvim',
-     dependencies = {
-       'nvim-tree/nvim-web-devicons',
-     }
+      'iofq/dart.nvim',
+      dependencies = {
+         'nvim-tree/nvim-web-devicons',
+      }
    },
    'mikavilpas/yazi.nvim',
 
+   -- insertion
+   'tpope/vim-surround',
+   --'hrsh7th/nvim-insx',
+   'windwp/nvim-ts-autotag',
+
+   -- theme
+   {{ 'rose-pine/neovim', name = 'rose-pine' }},
    'nvim-mini/mini.statusline',
 
-   {
-     'ivanjermakov/troublesum.nvim',
-     config = function()
-       require("troublesum").setup()
-     end
-   },
+   -- git
+   'tpope/vim-fugitive',
+   'tpope/vim-rhubarb', -- github support for fugitive
+   'tommcdo/vim-fubitive', -- bitbucket support for fugitive
+   'lewis6991/gitsigns.nvim',
 
-   'williamboman/mason.nvim',
-
-   {{
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      requires = {
-         -- LSP Support
-         {'neovim/nvim-lspconfig'},             -- Required
-         {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-               pcall(vim.cmd, 'MasonUpdate')
-            end,
-         },
-         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-         -- Autocompletion
-         {'hrsh7th/nvim-cmp'},     -- Required
-         {'hrsh7th/cmp-nvim-lsp'}, -- Required
-         {'L3MON4D3/LuaSnip'},     -- Required
-      }
-   }}
+   -- sessions
+   'folke/persistence.nvim',
 })

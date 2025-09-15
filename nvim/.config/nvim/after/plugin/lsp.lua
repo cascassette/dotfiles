@@ -1,15 +1,15 @@
-local lsp = require('lsp-zero').preset('recommended')
+--require('lspconfig').lua_ls.setup()
 
+--[[
 lsp.ensure_installed({
   'tsserver',
   'eslint',
   'lua_ls',
   'rust_analyzer',
 })
+]]
 
-local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
-
+--[[
 lsp.setup_nvim_cmp({
   mapping = lsp.defaults.cmp_mappings({
     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -18,25 +18,20 @@ lsp.setup_nvim_cmp({
     ['<C-space>'] = cmp.mapping.complete(),
   })
 })
+]]
 
-lsp.on_attach(function(_, bufnr)
-  lsp.default_keymaps({ buffer = bufnr })
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = vim.api.nvim_create_augroup("my.lsp", {}),
+  callback = function()
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+    -- vim.keymap.set('n', 'K', vim.lsp.buf.hover) -- key collides with ouroboros 'alternate file' cmd
+    vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float)
+    vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action)
+    vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references)
+    vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename)
+    vim.keymap.set('n', '<leader>dh', vim.diagnostic.hide)
 
-  local opts = {buffer = bufnr, remap = false}
-
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-  -- vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts) -- key collides with ouroboros 'alternate file' cmd
-  vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, opts)
-  vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, opts)
-  vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename, opts)
-  vim.keymap.set('n', '<leader>dh', vim.diagnostic.hide, opts)
-
-  --vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end, opts)
-  --vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
-end)
-
--- (Optional) Configure lua language server for neovim
-require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-
-lsp.setup()
+    vim.keymap.set('n', '<leader>vws', function() vim.lsp.buf.workspace_symbol() end)
+    --vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end)
+  end,
+})
