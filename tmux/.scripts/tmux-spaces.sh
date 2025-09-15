@@ -42,8 +42,8 @@ for SPACE in $NAME; do
     fi
     WORKING_DIR=$(echo $CFG | jq -r '.cwd')
     LAYOUT=$(echo $CFG | jq -r '.layout')
-    COMMAND=$(echo $CFG | jq -r '.command')
-    AUX_COMMAND=$(echo $CFG | jq -r '.["aux-command"]')
+    COMMAND=$(echo $CFG | jq -r '.command // empty')
+    AUX_COMMAND=$(echo $CFG | jq -r '.["aux-command"] // empty')
 
     # Check if there is already a window by that name
     WINDOW_NAME=$SPACE
