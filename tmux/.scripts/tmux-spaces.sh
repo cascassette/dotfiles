@@ -7,7 +7,7 @@ FZF_STYLE="fzf --bind tab:toggle-out,shift-tab:toggle-in"
 if [[ "$1" == "DEBUG" ]]; then
   DEBUG=1
 elif [[ -n $(jq -r ".[].name" < $CFG_FILE | grep "$1") ]]; then
-  ARG_NAME="$1"
+  ARG_NAME="$@"
 fi
 
 # Run with ts DEBUG to do a dry run
