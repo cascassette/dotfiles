@@ -268,3 +268,7 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'eu.mountainutilities.bcmanager'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'me.proton.authenticator'
+run = 'layout floating'
