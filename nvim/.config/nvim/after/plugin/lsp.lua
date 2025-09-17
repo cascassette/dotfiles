@@ -25,7 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function()
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
     -- vim.keymap.set('n', 'K', vim.lsp.buf.hover), { desc = "LSP hover definition" } -- key collides with ouroboros 'alternate file' cmd
-    -- vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, { desc = "LSP open float" })
+    vim.keymap.set('n', '<leader>vd', vim.diagnostic.open_float, { desc = "LSP open float" })
     vim.keymap.set('n', '<leader>vca', vim.lsp.buf.code_action, { desc = "List code actions" })
     vim.keymap.set('n', '<leader>vrr', vim.lsp.buf.references, { desc = "Find references" })
     vim.keymap.set('n', '<leader>vrn', vim.lsp.buf.rename, { desc = "Rename" })

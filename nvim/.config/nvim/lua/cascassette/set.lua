@@ -63,7 +63,6 @@ vim.opt.listchars = 'tab:»-,trail:·,eol:¬,nbsp:_'
 
 vim.opt.updatetime = 50
 
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 

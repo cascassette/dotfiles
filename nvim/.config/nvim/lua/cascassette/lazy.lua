@@ -1,3 +1,4 @@
+-- vim:ts=3:sts=3:sw=3:et
 require('lazy').setup({
    -- lsp, completion
    {
@@ -70,22 +71,45 @@ require('lazy').setup({
       'mason-org/mason.nvim',
       opts = {},
    },
-   {{ 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }},
+   {
+      'nvim-treesitter/nvim-treesitter',
+      branch = 'main',
+      lazy = false,
+      build = ':TSUpdate',
+   },
    {
       'ivanjermakov/troublesum.nvim',
       config = function()
          require("troublesum").setup()
       end
    },
+   {
+      'folke/snacks.nvim',
+      priority = 1000,
+      lazy = false,
+      opts = {
+         bigfile = { enabled = true }, -- just bigfile, it will disable treesitter/lsp for files that are too big
+         dashboard = { enabled = false },
+         explorer = { enabled = false },
+         indent = { enabled = false },
+         input = { enabled = false },
+         picker = { enabled = false },
+         notifier = { enabled = false },
+         quickfile = { enabled = false },
+         scope = { enabled = false },
+         scroll = { enabled = false },
+         statuscolumn = { enabled = false },
+         words = { enabled = false },
+      },
+   },
 
-   -- file types
+   -- specific file types
    'elzr/vim-json',
    'prettier/vim-prettier',
 
    -- picker
    {{
       'cascassette/telescope.nvim',
-      -- or                          , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
    }},
 
@@ -117,8 +141,15 @@ require('lazy').setup({
    'christoomey/vim-tmux-navigator',
    'nvim-tree/nvim-tree.lua',
    'qpkorr/vim-bufkill',
-   'romainl/vim-qf',
-   'TamaMcGlinn/quickfixdd',
+   --'romainl/vim-qf',
+   {
+      'kevinhwang91/nvim-bqf',
+      opts = {
+         preview = {
+            winblend = 0,
+         },
+      },
+   },
    'tzachar/highlight-undo.nvim',
    {
       'iofq/dart.nvim',
@@ -127,6 +158,7 @@ require('lazy').setup({
       }
    },
    'mikavilpas/yazi.nvim',
+   'nvim-focus/focus.nvim',
 
    -- insertion
    'tpope/vim-surround',
