@@ -1,5 +1,5 @@
 require('nvim-treesitter').setup({
-  ensure_installed = { "c", "cpp", "typescript", "rust" },
+  ensure_installed = { "c", "cpp", "typescript", "rust", "markdown", "markdown_inline" },
   auto_install = true,
   highlight = {
     enable = true,

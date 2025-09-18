@@ -106,6 +106,7 @@ require('lazy').setup({
    -- specific file types
    'elzr/vim-json',
    'prettier/vim-prettier',
+   'MeanderingProgrammer/render-markdown.nvim',
 
    -- picker
    {{
