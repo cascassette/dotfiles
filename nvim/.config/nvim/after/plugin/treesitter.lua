@@ -14,7 +14,7 @@ require('nvim-treesitter').setup({
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldenable = false
+vim.opt.foldlevel = 1000
 
 -- not working rn
 -- this came from https://stackoverflow.com/questions/77220511/neovim-fold-code-with-foldmethod-syntax-or-foldmethod-expr-depending-on-tre
