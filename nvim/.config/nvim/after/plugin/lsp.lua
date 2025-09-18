@@ -1,14 +1,3 @@
---require('lspconfig').lua_ls.setup()
-
---[[
-lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'lua_ls',
-  'rust_analyzer',
-})
-]]
-
 --[[
 lsp.setup_nvim_cmp({
   mapping = lsp.defaults.cmp_mappings({
@@ -19,6 +8,9 @@ lsp.setup_nvim_cmp({
   })
 })
 ]]
+
+vim.lsp.enable('ts_ls')
+vim.lsp.enable('lua_ls')
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup("my.lsp", { clear = true }),
