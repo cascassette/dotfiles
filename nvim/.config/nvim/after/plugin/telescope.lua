@@ -6,7 +6,8 @@ vim.keymap.set('n', '<leader>f', builtin.find_files)
 vim.keymap.set('n', '<leader>g', builtin.git_files)
 vim.keymap.set('n', '<leader>/', function() builtin.live_grep({ additional_args = { "-." } }) end)    -- `-.` arg to rg means include hidden files
 vim.keymap.set('n', '<leader>b', builtin.buffers)
-vim.keymap.set('n', '<leader>h', builtin.jumplist)
+vim.keymap.set('n', '<leader>h', function() builtin.jumplist({ cwd_only = true }) end)
+vim.keymap.set('n', '<leader>H', builtin.jumplist)
 vim.keymap.set('n', '<leader>m', function() builtin.marks({ cwd_only = true }) end)
 vim.keymap.set('n', '<leader>r', function() builtin.oldfiles({ only_cwd = true }) end)    -- think r for "recent"
 vim.keymap.set('n', '<leader>R', builtin.oldfiles)                                        -- think r for "recent"
