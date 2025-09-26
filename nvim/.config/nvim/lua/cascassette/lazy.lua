@@ -117,10 +117,6 @@ require('lazy').setup({
 
    -- navigation
    {
-      'suliatis/jumppack',
-      config = true,
-   },
-   {
       "folke/flash.nvim",
       event = "VeryLazy",
       opts = {
