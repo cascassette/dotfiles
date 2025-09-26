@@ -9,7 +9,7 @@ vim.g.nvim_tree_follow = 1
 
 require('nvim-tree').setup({
    view = {
-      width = 30,
+      width = 45,
    },
    filters = {
       dotfiles = true,
