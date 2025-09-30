@@ -32,7 +32,6 @@ for NAME in $NAMES; do
       TMUX_NOT_RUNNING=1
       TMUX_COMMAND="new-session -d -s $SESSION_NAME -x - -y -"
     else
-      TMUX_NOT_RUNNING=
       TMUX_COMMAND=new-window
     fi
 
@@ -62,8 +61,13 @@ for NAME in $NAMES; do
       run "tmux split-window -t $SESSION_NAME:$WINDOW_NAME -l 8 -c $WORKING_DIR $AUX_COMMAND"
       run "tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.0"
     fi
-    if [[ -n "$TMUX_NOT_RUNNING" ]]; then
-      run "tmux attach -t $SESSION_NAME"
-    fi
   fi
 done
+
+if [[ -n "$TMUX_NOT_RUNNING" ]]; then
+  run "tmux select-window -t $SESSION_NAME:1"
+  run "tmux attach -t $SESSION_NAME"
+fi
+
+# clear bell / activity flags
+run "tmux kill-session -C -t $SESSION_NAME"
