@@ -20,6 +20,9 @@ require('lazy').setup({
             dependencies = { 'rafamadriz/friendly-snippets' },
             version = '1.*',
             opts = {
+               enabled = function()
+                  return not vim.tbl_contains({ "json", "md", "txt", "org" }, vim.bo.filetype) and vim.bo.buftype ~= "prompt"
+               end,
                keymap = { preset = 'default' },
                appearance = {
                   nerd_font_variant = 'mono'
