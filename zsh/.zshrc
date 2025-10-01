@@ -85,13 +85,6 @@ alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
 alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 
-alias y='yarn'
-alias ys='yarn start'
-alias yse='yarn serve'
-alias yb='yarn build'
-alias yyb='yarn && yarn build'
-alias tw='yarn test:watch'
-
 alias du='du -h'
 alias df='df -h'
 
@@ -106,7 +99,6 @@ alias werk='open /Applications/Arc.app;\
 
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 
-eval "$(thefuck --alias)"
 eval "$(pyenv init -)"
 
 # vim mode
