@@ -1,5 +1,9 @@
 #!/bin/sh
 
+## TODO
+# support ncmpcpp/vimpc window, that sets the following tmux setting locally when launching ncmpcpp:
+#   setw monitor-activity off
+
 CFG_FILE="$HOME/.scripts/spaces.json"
 SESSION_NAME=main
 FZF_STYLE="fzf --bind tab:toggle-out,shift-tab:toggle-in"
