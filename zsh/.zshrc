@@ -79,6 +79,7 @@ alias nl='npm ls'
 alias nt='npm test'
 alias bfb='npm run build && git add . && git commit -m "fix: build"'
 
+alias pi='pnpm i'
 alias pib='pnpm i && pnpm build'
 alias pb='pnpm build'
 alias prs='pnpm run storybook'
