@@ -212,6 +212,10 @@ run = ['layout tiling', 'move-node-to-workspace 2']
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 3'
 
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace 3'
+
 # Workspace 4/V = Video
 [[on-window-detected]]
 if.app-id = 'com.obsproject.obs-studio'
@@ -279,4 +283,8 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.atlassian.trello'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'org.keepassxc.keepassxc'
 run = 'layout floating'
