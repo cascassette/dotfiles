@@ -73,5 +73,5 @@ if [[ -n "$TMUX_NOT_RUNNING" ]]; then
   run "tmux attach -t $SESSION_NAME"
 fi
 
-# clear bell / activity flags
-run "tmux kill-session -C -t $SESSION_NAME"
+# clear bell / activity flags (does not work)
+#run "tmux kill-session -C -t $SESSION_NAME"
