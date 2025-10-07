@@ -1,9 +1,5 @@
 #!/bin/sh
 
-## TODO
-# support ncmpcpp/vimpc window, that sets the following tmux setting locally when launching ncmpcpp:
-#   setw monitor-activity off
-
 CFG_FILE="$HOME/.scripts/spaces.json"
 SESSION_NAME=main
 FZF_STYLE="fzf --bind tab:toggle-out,shift-tab:toggle-in"
@@ -48,6 +44,7 @@ for NAME in $NAMES; do
     LAYOUT=$(echo $CFG | jq -r '.layout')
     COMMAND=$(echo $CFG | jq -r '.command // empty')
     AUX_COMMAND=$(echo $CFG | jq -r '.["aux-command"] // empty')
+    SILENT=$(echo $CFG | jq -r '.silent // empty')
 
     # Check if there is already a window by that name
     WINDOW_NAME=$NAME
@@ -64,6 +61,9 @@ for NAME in $NAMES; do
     if [ "$WINDOW_NAME" = "$NAME" -a "$LAYOUT" = "main-aux" ]; then
       run "tmux split-window -t $SESSION_NAME:$WINDOW_NAME -l 8 -c $WORKING_DIR $AUX_COMMAND"
       run "tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.0"
+      if [ -n "$SILENT" ]; then
+        run "tmux setw -t $SESSION_NAME:$WINDOW_NAME monitor-activity off"
+      fi
     fi
   fi
 done
