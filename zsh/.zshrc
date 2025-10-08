@@ -98,7 +98,8 @@ alias werk='open /Applications/Arc.app;\
   open /Applications/MacPass.app;\
   ts rhc utr nlds'
 
-alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
+# gbr function to select branch with fzf
+source ~/.scripts/gbr.sh
 
 alias ae='~/.scripts/aerospace-keyboard-layout.sh'
 

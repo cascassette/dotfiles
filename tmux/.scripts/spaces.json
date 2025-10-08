@@ -35,7 +35,14 @@
   {
     "name": "ytdl",
     "cwd": "~/Downloads/yt-rips",
-    "command": "~/.scripts/ytdl.sh"
+    "command": "~/.scripts/ytdl.sh",
+    "silent": true
+  },
+  {
+    "name": "mpc",
+    "cwd": "~",
+    "command": "vimpc",
+    "silent": true
   },
   {
     "name": "sdio",
