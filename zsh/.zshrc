@@ -100,6 +100,8 @@ alias werk='open /Applications/Arc.app;\
 
 alias yd='cd ~/Downloads/yt-rips && yt-dlp -x'
 
+alias ae='~/.scripts/aerospace-keyboard-layout.sh'
+
 eval "$(pyenv init -)"
 
 # vim mode
