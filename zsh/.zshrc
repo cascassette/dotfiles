@@ -96,7 +96,7 @@ alias werk='open /Applications/Zen.app;\
   open /Applications/Franz.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
-  ts rhc utr nlds'
+  ts rhc cfg'
 
 # gbr function to select branch with fzf
 source ~/.scripts/gbr.sh
