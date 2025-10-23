@@ -89,7 +89,7 @@ alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 alias du='du -h'
 alias df='df -h'
 
-alias werk='open /Applications/Arc.app;\
+alias werk='open /Applications/Zen.app;\
   open /Applications/iTerm.app;\
   open /Applications/Slack.app;\
   open /Applications/Webex.app;\
