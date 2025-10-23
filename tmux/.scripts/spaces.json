@@ -54,5 +54,10 @@
   {
     "name": "home",
     "cwd": "~"
+  },
+  {
+    "name": "pihole",
+    "cwd": "~",
+    "command": "ssh pihole.local"
   }
 ]
