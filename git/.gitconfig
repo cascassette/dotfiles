@@ -12,6 +12,7 @@
 [alias]
    unadd = reset HEAD --
    pickable = log --oneline --cherry-pick --right-only --reverse
+   jump = "!$(brew --prefix git)/share/git-core/contrib/git-jump/git-jump"
 [push]
    autoSetupRemote = true
 [interactive]
