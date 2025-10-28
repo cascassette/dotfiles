@@ -41,7 +41,7 @@ default-root-container-orientation = 'auto'
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
-#key-mapping.preset = 'dvorak'
+# key-mapping.preset = 'dvorak' or 'qwerty'
 key-mapping.preset = 'qwerty'
 
 # Mouse follows focus when focused monitor changes

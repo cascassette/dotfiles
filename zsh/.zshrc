@@ -101,6 +101,8 @@ alias werk='open /Applications/Zen.app;\
 # gbr function to select branch with fzf
 source ~/.scripts/gbr.sh
 
+alias ae='~/.scripts/aerospace-keyboard-layout.sh'
+
 eval "$(pyenv init -)"
 
 # vim mode
