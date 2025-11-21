@@ -139,6 +139,7 @@ require('lazy').setup({
    },
    'jakemason/ouroboros',
    'cascassette/vim-indentwise',
+   'christoomey/vim-tmux-navigator',
    'nvim-tree/nvim-tree.lua',
    'qpkorr/vim-bufkill',
    --'romainl/vim-qf',
