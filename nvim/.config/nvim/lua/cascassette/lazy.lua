@@ -159,7 +159,6 @@ require('lazy').setup({
       }
    },
    'mikavilpas/yazi.nvim',
-   'nvim-focus/focus.nvim',
    'hiattp/splitwise.nvim',
 
    -- insertion
