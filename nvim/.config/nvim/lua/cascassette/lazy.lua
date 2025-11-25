@@ -94,6 +94,7 @@ require('lazy').setup({
 
    -- specific file types
    'elzr/vim-json',
+   'yochem/jq-playground.nvim',
    'prettier/vim-prettier',
    {
       'MeanderingProgrammer/render-markdown.nvim',
