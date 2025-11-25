@@ -167,7 +167,12 @@ require('lazy').setup({
    'windwp/nvim-ts-autotag',
 
    -- theme
-   {{ 'rose-pine/neovim', name = 'rose-pine' }},
+   --{{ 'rose-pine/neovim', name = 'rose-pine' }},
+   {
+      'tommarien/github-plus.nvim',
+      lazy = false,
+      priority = 1000,
+   },
    'nvim-mini/mini.statusline',
 
    -- git
