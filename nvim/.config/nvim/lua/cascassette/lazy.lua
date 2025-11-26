@@ -94,6 +94,7 @@ require('lazy').setup({
 
    -- specific file types
    'elzr/vim-json',
+   'yochem/jq-playground.nvim',
    'prettier/vim-prettier',
    {
       'MeanderingProgrammer/render-markdown.nvim',
@@ -139,6 +140,7 @@ require('lazy').setup({
    },
    'jakemason/ouroboros',
    'cascassette/vim-indentwise',
+   'christoomey/vim-tmux-navigator',
    'nvim-tree/nvim-tree.lua',
    'qpkorr/vim-bufkill',
    --'romainl/vim-qf',
@@ -158,7 +160,6 @@ require('lazy').setup({
       }
    },
    'mikavilpas/yazi.nvim',
-   'nvim-focus/focus.nvim',
    'hiattp/splitwise.nvim',
 
    -- insertion
@@ -167,7 +168,12 @@ require('lazy').setup({
    'windwp/nvim-ts-autotag',
 
    -- theme
-   {{ 'rose-pine/neovim', name = 'rose-pine' }},
+   --{{ 'rose-pine/neovim', name = 'rose-pine' }},
+   {
+      'tommarien/github-plus.nvim',
+      lazy = false,
+      priority = 1000,
+   },
    'nvim-mini/mini.statusline',
 
    -- git
