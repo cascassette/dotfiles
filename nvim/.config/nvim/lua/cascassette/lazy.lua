@@ -181,6 +181,7 @@ require('lazy').setup({
    'tpope/vim-rhubarb', -- github support for fugitive
    'tommcdo/vim-fubitive', -- bitbucket support for fugitive
    'lewis6991/gitsigns.nvim',
+   { 'akinsho/git-conflict.nvim', version = "*", config = true },
 
    -- sessions
    'folke/persistence.nvim',
