@@ -48,11 +48,11 @@ for NAME in $NAMES; do
 
     # Check if there is already a window by that name
     WINDOW_NAME=$NAME
-    WINDOW_EXISTS=$(tmux list-windows -F '#{window_name}' 2>/dev/null | grep "$WINDOW_NAME")
+    WINDOW_EXISTS=$(tmux list-windows -F '#{window_name}' 2>/dev/null | grep "^$WINDOW_NAME$")
     NUMBER=2
     until [[ -z $WINDOW_EXISTS ]]; do
       WINDOW_NAME="$NAME$NUMBER"
-      WINDOW_EXISTS=$(tmux list-windows -F '#{window_name}' 2>/dev/null | grep "$WINDOW_NAME")
+      WINDOW_EXISTS=$(tmux list-windows -F '#{window_name}' 2>/dev/null | grep "^$WINDOW_NAME$")
       NUMBER=$(($NUMBER + 1))
     done
 
