@@ -22,7 +22,7 @@ vim.keymap.set('n', '<Tab>', '<C-w>w')
 --vim.keymap.set('n', 'L', vim.cmd.bnext) -- superseded now by dart.nvim plugin
 vim.keymap.set('n', 'K', vim.cmd.Ouroboros)
 
-vim.keymap.set('n', '<Space>', vim.cmd.write)
+vim.keymap.set('n', '<Space>', vim.cmd.write, { desc = "Save file" })
 
 -- editing, reloading, executing config
 vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>')
