@@ -96,7 +96,6 @@ alias df='df -h'
 alias werk='open /Applications/Zen.app;\
   open /Applications/iTerm.app;\
   open /Applications/Slack.app;\
-  open /Applications/Webex.app;\
   open /Applications/Franz.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
