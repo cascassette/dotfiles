@@ -86,8 +86,8 @@ alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
 alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 
-alias cc='cmake -B Builds -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -G Ninja -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" .'
-alias cb="cmake --build Builds --config Release"
+alias cc='cmake -B Builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -G Xcode -DCMAKE_OSX_ARCHITECTURES="arm64" .'
+alias cb="cmake --build Builds --config Debug"
 alias ct="cd Builds; ctest --verbose --output-on-failure; cd .."
 
 alias du='du -h'
