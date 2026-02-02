@@ -16,6 +16,7 @@ vim.keymap.set('n', '<Right>', '10zl')
 
 -- cycle windows
 vim.keymap.set('n', '<Tab>', '<C-w>w')
+vim.keymap.set('n', '<S-Tab>', '<C-w>W')
 
 -- cycle buffers, quit buffer
 --vim.keymap.set('n', 'H', vim.cmd.bprev) -- superseded now by dart.nvim plugin
