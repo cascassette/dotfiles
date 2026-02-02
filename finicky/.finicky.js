@@ -14,19 +14,30 @@ export default {
         "https://sinedub.io/*",
         "*juce*",
         "*//trello.com*",
-        "localhost:3000/*",
       ],
+      ...containerify("OTXO"),
+    },
+    {
+      match: (url) => url.hostname === "localhost" && url.port === 3000,
       ...containerify("OTXO"),
     },
     // Work stuff
     {
-      match: [
-        "*nldesignsystem*",
-        "*nl-design-system*",
-        "localhost:6006",
-        "localhost:6008",
-      ],
+      match: ["*nldesignsystem*", "*nl-design-system*"],
       ...containerify("Logius"),
+    },
+    {
+      match: (url) =>
+        url.hostname === "localhost" && url.port >= 6000 && url.port < 6010,
+      ...containerify("Logius"),
+    },
+    // Blocks
+    {
+      match: "x.com/*",
+      url: (url) => {
+        url.host = "xcancel.com";
+        return url;
+      },
     },
   ],
 };
