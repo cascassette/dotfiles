@@ -37,7 +37,7 @@ for NAME in $NAMES; do
 
     CFG=$(jq -r ".[] | select(.name == \"$NAME\")" < $CFG_FILE)
     if [[ -z "$CFG" ]]; then
-      echo "Config not found" &>2
+      echo "Config not found" >&2
       exit 404;
     fi
     WORKING_DIR=$(echo $CFG | jq -r '.cwd')
