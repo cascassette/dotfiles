@@ -11,7 +11,7 @@
   },
   {
     "name": "otxo",
-    "cwd": "~/Source/otxo",
+    "cwd": "~/Source/otxo2",
     "command": "nvim"
   },
   {
