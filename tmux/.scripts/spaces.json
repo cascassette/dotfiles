@@ -39,10 +39,9 @@
     "silent": true
   },
   {
-    "name": "mpc",
-    "cwd": "~",
-    "command": "vimpc",
-    "silent": true
+    "name": "cmake",
+    "cwd": "~/Source/cmake-includes",
+    "command": "nvim"
   },
   {
     "name": "sdio",
