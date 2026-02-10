@@ -108,8 +108,6 @@ source ~/.scripts/gbr.sh
 
 alias ae='~/.scripts/aerospace-keyboard-layout.sh'
 
-eval "$(pyenv init -)"
-
 # vim mode
 bindkey -v
 bindkey '^r' history-incremental-search-backward
