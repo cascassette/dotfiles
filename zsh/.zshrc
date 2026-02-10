@@ -136,5 +136,8 @@ eval "$(zoxide init zsh)"
 # from https://unix.stackexchange.com/questions/139115/disable-ctrl-d-from-closing-my-window-with-the-terminator-terminal-emulator
 export IGNOREEOF=42
 
+# load direnv
+eval "$(direnv hook zsh)"
+
 # for profiling zsh startup time
 #zprof
