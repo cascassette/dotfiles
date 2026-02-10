@@ -94,12 +94,12 @@ alias du='du -h'
 alias df='df -h'
 
 alias werk='open /Applications/Zen.app;\
-  open /Applications/iTerm.app;\
   open /Applications/Slack.app;\
+  open /Applications/Microsoft\ Teams.app;\
   open /Applications/Franz.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
-  ts rhc cfg'
+  ts rhc'
 
 # gbr function to select branch with fzf
 source ~/.scripts/gbr.sh
