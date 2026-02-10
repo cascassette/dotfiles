@@ -93,6 +93,8 @@ alias ct="cd Builds; ctest --verbose --output-on-failure; cd .."
 alias du='du -h'
 alias df='df -h'
 
+alias gen=~/.scripts/gen-dl-link.sh
+
 alias werk='open /Applications/Zen.app;\
   open /Applications/Slack.app;\
   open /Applications/Microsoft\ Teams.app;\
