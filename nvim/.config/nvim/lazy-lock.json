@@ -5,7 +5,7 @@
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "git-conflict.nvim": { "branch": "main", "commit": "4bbfdd92d547d2862a75b4e80afaf30e73f7bbb4" },
   "github-plus.nvim": { "branch": "main", "commit": "634796fca4fc3166c7274be73c7e0988788d26dd" },
-  "gitsigns.nvim": { "branch": "main", "commit": "f7cc6850517b8db59a41314b83bb7994eae33cdd" },
+  "gitsigns.nvim": { "branch": "main", "commit": "31217271a7314c343606acb4072a94a039a19fb5" },
   "highlight-undo.nvim": { "branch": "main", "commit": "ee32e12693d70e66f954d09a504a7371d110fc27" },
   "jq-playground.nvim": { "branch": "main", "commit": "144390b4a96ba30e3a6c192ecaf48fe26859434d" },
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
@@ -36,5 +36,5 @@
   "vim-rhubarb": { "branch": "master", "commit": "5496d7c94581c4c9ad7430357449bb57fc59f501" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-tmux-navigator": { "branch": "master", "commit": "e41c431a0c7b7388ae7ba341f01a0d217eb3a432" },
-  "yazi.nvim": { "branch": "main", "commit": "4b1074fe32f39bd8369c2f33851f4f031cfb549d" }
+  "yazi.nvim": { "branch": "main", "commit": "60873fe0963a27ded1e619067e3ba421b2442c49" }
 }
