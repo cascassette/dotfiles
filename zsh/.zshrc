@@ -31,6 +31,9 @@ alias d='lsd'
 alias e=$EDITOR
 alias r='yazi'
 
+alias 'e-'='e -'
+alias 'e.'='e .'
+
 alias ts='~/.scripts/tmux-spaces.sh'
 
 alias da='d -a'
