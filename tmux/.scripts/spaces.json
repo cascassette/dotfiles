@@ -1,9 +1,7 @@
 [
   {
-    "name": "rhc",
-    "cwd": "~/Source/logius/rhc",
-    "layout": "main-aux",
-    "command": "nvim"
+    "name": "home",
+    "cwd": "~"
   },
   {
     "name": "cfg",
@@ -15,14 +13,8 @@
     "command": "nvim"
   },
   {
-    "name": "nlds",
-    "cwd": "~/Source/logius/nlds",
-    "layout": "main-aux",
-    "command": "nvim"
-  },
-  {
-    "name": "utr",
-    "cwd": "~/Source/logius/utrecht",
+    "name": "rhc",
+    "cwd": "~/Source/logius/rhc",
     "layout": "main-aux",
     "command": "nvim"
   },
@@ -51,8 +43,16 @@
     "aux-command": "npm run dev"
   },
   {
-    "name": "home",
-    "cwd": "~"
+    "name": "nlds",
+    "cwd": "~/Source/logius/nlds",
+    "layout": "main-aux",
+    "command": "nvim"
+  },
+  {
+    "name": "utr",
+    "cwd": "~/Source/logius/utrecht",
+    "layout": "main-aux",
+    "command": "nvim"
   },
   {
     "name": "pihole",
