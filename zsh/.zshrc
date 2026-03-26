@@ -103,6 +103,7 @@ alias werk='open /Applications/Zen.app;\
   open /Applications/Slack.app;\
   open /Applications/Microsoft\ Teams.app;\
   open /Applications/Franz.app;\
+  open /Applications/Webex.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
   ts rhc'
