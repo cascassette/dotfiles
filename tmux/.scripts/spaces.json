@@ -10,6 +10,7 @@
   {
     "name": "otxo",
     "cwd": "~/Source/otxo2",
+    "layout": "main-aux",
     "command": "nvim"
   },
   {
