@@ -176,6 +176,7 @@ require('lazy').setup({
       priority = 1000,
    },
    ]]
+   --'ember-theme/nvim',
    'sainnhe/everforest',
    'nvim-mini/mini.statusline',
 
