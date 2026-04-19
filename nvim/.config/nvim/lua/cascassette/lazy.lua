@@ -169,11 +169,14 @@ require('lazy').setup({
 
    -- theme
    --{{ 'rose-pine/neovim', name = 'rose-pine' }},
+   --[[
    {
       'tommarien/github-plus.nvim',
       lazy = false,
       priority = 1000,
    },
+   ]]
+   'sainnhe/everforest',
    'nvim-mini/mini.statusline',
 
    -- git

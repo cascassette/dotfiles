@@ -1,1 +1,1 @@
-vim.cmd.colorscheme('github_plus')
+vim.cmd.colorscheme('everforest')

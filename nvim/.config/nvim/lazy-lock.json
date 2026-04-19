@@ -1,10 +1,10 @@
 {
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "dart.nvim": { "branch": "master", "commit": "af7256291c8f692647004b9a9fc0e92b6084a691" },
+  "everforest": { "branch": "master", "commit": "aeef62ee97872d2557d25904d160ec93a4a355f8" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "git-conflict.nvim": { "branch": "main", "commit": "4bbfdd92d547d2862a75b4e80afaf30e73f7bbb4" },
-  "github-plus.nvim": { "branch": "main", "commit": "6459af1c7af9c62e159e8e75aa1509ebda33bfd9" },
   "gitsigns.nvim": { "branch": "main", "commit": "8d82c240f190fc33723d48c308ccc1ed8baad69d" },
   "highlight-undo.nvim": { "branch": "main", "commit": "ee32e12693d70e66f954d09a504a7371d110fc27" },
   "jq-playground.nvim": { "branch": "main", "commit": "8bf7d17677d837e62575ddaa48906f4cc21e89bc" },
