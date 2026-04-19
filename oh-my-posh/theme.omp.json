@@ -14,11 +14,6 @@
     "foreground": "p:black",
     "background": "transparent"
   },
-  "transient_prompt": {
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> ",
-    "foreground": "p:black",
-    "background": "transparent"
-  },
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "blocks": [
     {
