@@ -3,7 +3,7 @@
   "palette": {
     "black": "#252626",
     "blue": "#12808D",
-    "green": "#59C9A5",
+    "green": "#2F4B3D",
     "orange": "#D85133",
     "red": "#73160F",
     "white": "#F3ECDC",
@@ -53,7 +53,7 @@
             "truncate_symbol": "..."
           },
           "template": " {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
-          "foreground": "p:black",
+          "foreground": "p:white",
           "powerline_symbol": "\ue0b0",
           "background": "p:green",
           "type": "git",
