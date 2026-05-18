@@ -41,7 +41,8 @@
     "cwd": "~/Source/website",
     "layout": "main-aux",
     "command": "nvim",
-    "aux-command": "npm run dev"
+    "aux-command": "npm run dev",
+    "silent": true
   },
   {
     "name": "nlds",
