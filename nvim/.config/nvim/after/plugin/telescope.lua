@@ -1,10 +1,15 @@
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
+local pickers = require("telescope.pickers")
+local finders = require("telescope.finders")
+local sorters = require("telescope.sorters")
+local make_entry = require("telescope.make_entry")
+local conf = require("telescope.config").values
 
 vim.keymap.set('n', '<leader>f', function() builtin.find_files() end,                                                        { desc = "Find files" })
 vim.keymap.set('n', '<leader>g', function() builtin.git_files() end,                                                         { desc = "Find files relevant according to git" })
-vim.keymap.set('n', '<leader>/', function() builtin.live_grep({ additional_args = { "-." } }) end,                           { desc = "Search text throughout project" }) -- `-.` arg to rg means include hidden files
+vim.keymap.set('n', '<leader>/', function() multigrep({ additional_args = { "-." } }) end,                                   { desc = "Search text throughout project" }) -- `-.` arg to rg means include hidden files
 vim.keymap.set('n', '<leader>b', function() builtin.buffers() end,                                                           { desc = "Pick buffer" }) -- b for buffers
 vim.keymap.set('n', '<leader>h', function() builtin.jumplist({ cwd_only = true }) end,                                       { desc = "Pick position from jumplist in project" }) -- think h for "history"
 vim.keymap.set('n', '<leader>H', function() builtin.jumplist() end,                                                          { desc = "Pick position from jumplist (globally)" })
@@ -40,6 +45,48 @@ local function single_or_multi_select(prompt_bufnr)
     -- if not multi selection, open single file
     actions.select_default(prompt_bufnr)
   end
+end
+
+multigrep = function (opts)
+  opts = opts or {}
+  opts.cwd = opts.cwd or vim.fn.getcwd()
+
+  local finder = finders.new_async_job {
+    command_generator = function (prompt)
+      if not prompt or prompt == "" then
+        return nil
+      end
+
+      local pieces = vim.split (prompt, "  ")
+      local cmd = { "rg" }
+
+      if pieces[1] then
+        table.insert (cmd, "-e")
+        table.insert (cmd, pieces[1])
+      end
+
+      if pieces[2] then
+        table.insert (cmd, "-g")
+        table.insert (cmd, pieces[2])
+      end
+
+      return vim.tbl_flatten {
+        cmd,
+        { "--color=never", "--no-heading", "--with-filename", "--line-number", "--column", "--smart-case" },
+        opts.additional_args,
+      }
+    end,
+    entry_maker = make_entry.gen_from_vimgrep (opts),
+    cwd = opts.cwd,
+  }
+
+  pickers.new (opts, {
+    debounce = 100,
+    prompt_title = "Live Grep (double space to filter files with glob)",
+    finder = finder,
+    previewer = conf.grep_previewer (opts),
+    sorter = sorters.empty(),
+  }):find()
 end
 
 require('telescope').setup({
