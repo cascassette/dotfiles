@@ -60,5 +60,11 @@
     "name": "pihole",
     "cwd": "~",
     "command": "ssh pihole.local"
+  },
+  {
+    "name": "music",
+    "cwd": "~",
+    "silent": true,
+    "command": "ncmpcpp"
   }
 ]
