@@ -85,6 +85,7 @@ alias bfb='npm run build && git add . && git commit -m "fix: build"'
 alias pi='pnpm i'
 alias pib='pnpm i && pnpm build'
 alias pb='pnpm build'
+alias pt='pnpm test'
 alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
 alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
@@ -93,6 +94,7 @@ alias cc='cmake -B Builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER_LAUNCHER=s
 alias cb="cmake --build Builds --config Debug"
 alias ct="cd Builds; ctest --verbose --output-on-failure; cd .."
 alias cco='cc && open Builds/*.xcodeproj'
+alias xcb='xcodebuild -configuration Debug -target otxo_All -project Builds/otxo.xcodeproj'
 
 alias du='du -h'
 alias df='df -h'
@@ -124,10 +126,8 @@ export KEYTIMEOUT=1
 # colors
 . ~/.config/rose-pine.sh
 
-# for ranger custom config
-export RANGER_LOAD_DEFAULT_RC="FALSE"
-
-#source /Users/cas/.config/broot/launcher/bash/br
+# add go compiled and installed binaries to path
+export PATH=$PATH:~/go/bin
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
