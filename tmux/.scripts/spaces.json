@@ -9,7 +9,7 @@
   },
   {
     "name": "otxo",
-    "cwd": "~/Source/otxo2",
+    "cwd": "~/Source/otxo",
     "layout": "main-aux",
     "command": "nvim"
   },
