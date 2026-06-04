@@ -112,7 +112,7 @@ alias werk='open /Applications/Zen.app;\
 alias otxo='open /Applications/Zen.app;\
   open /Applications/Discord.app;\
   open /Applications/Franz.app;\
-  open /Users/cas/Source/otxo2/Builds/otxo.xcodeproj;\
+  open /Users/cas/Source/otxo/Builds/otxo.xcodeproj;\
   ts otxo'
 
 # gbr function to select branch with fzf
