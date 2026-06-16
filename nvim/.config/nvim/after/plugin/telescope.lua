@@ -23,7 +23,7 @@ vim.keymap.set('n', '<leader>c', function() builtin.git_bcommits({ git_command =
 -- non-live grep, think s for search
 vim.keymap.set('n', '<leader>s', function()
 	builtin.grep_string({ search = vim.fn.input('Grep > '), additional_args = { "-." } })
-end)
+end, { desc = "Non-live grep (enter search term then grep)" })
 
 local function single_or_multi_select(prompt_bufnr)
   local current_picker = action_state.get_current_picker(prompt_bufnr)
