@@ -66,5 +66,11 @@
     "cwd": "~",
     "silent": true,
     "command": "ncmpcpp"
+  },
+  {
+    "name": "late",
+    "cwd": "~",
+    "silent": true,
+    "command": "ssh -o IdentitiesOnly=yes -i ~/.ssh/late_key late.sh"
   }
 ]
