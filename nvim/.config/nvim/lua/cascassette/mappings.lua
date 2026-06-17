@@ -57,6 +57,4 @@ vim.keymap.set('n', '˚', vim.cmd.cp)
 --vim.keymap.set('n', 'Ô', vim.diagnostic.goto_next)
 --vim.keymap.set('n', '', vim.diagnostic.goto_prev)
 
-vim.keymap.set('n', '<leader>*', function() vim.opt.hlsearch = true end)
-
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader><leader>', '<C-^>')
