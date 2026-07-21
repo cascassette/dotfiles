@@ -62,7 +62,7 @@ for NAME in $NAMES; do
       run "tmux split-window -t $SESSION_NAME:$WINDOW_NAME -l 8 -c $WORKING_DIR $AUX_COMMAND"
       run "tmux select-pane -t $SESSION_NAME:$WINDOW_NAME.0"
       if [ -n "$SILENT" ]; then
-        run "tmux setw -t $SESSION_NAME:$WINDOW_NAME monitor-activity off"
+        run "tmux set-option -t $SESSION_NAME:$WINDOW_NAME monitor-activity off"
       fi
     fi
   fi
