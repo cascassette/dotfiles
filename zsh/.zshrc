@@ -103,7 +103,7 @@ alias gen=~/.scripts/gen-dl-link.sh
 
 alias werk='open /Applications/Zen.app;\
   open /Applications/Slack.app;\
-  open /Applications/Franz.app;\
+  open /Applications/Rambox.app;\
   open /Applications/Webex.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
@@ -111,7 +111,7 @@ alias werk='open /Applications/Zen.app;\
 
 alias otxo='open /Applications/Zen.app;\
   open /Applications/Discord.app;\
-  open /Applications/Franz.app;\
+  open /Applications/Rambox.app;\
   open /Users/cas/Source/otxo/Builds/otxo.xcodeproj;\
   ts otxo'
 
