@@ -88,6 +88,7 @@ alias pb='pnpm build'
 alias pt='pnpm test'
 alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
+alias ppw='pnpm prettier --write'
 alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 
 alias cc="cmake -B Builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -G Xcode -DCMAKE_OSX_ARCHITECTURES=\"$(uname -m)\" ."
