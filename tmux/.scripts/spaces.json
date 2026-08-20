@@ -5,7 +5,8 @@
   },
   {
     "name": "cfg",
-    "cwd": "~/Source/dotfiles"
+    "cwd": "~/Source/dotfiles",
+    "command": "nvim"
   },
   {
     "name": "otxo",
