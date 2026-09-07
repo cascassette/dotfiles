@@ -88,6 +88,7 @@ alias pb='pnpm build'
 alias pt='pnpm test'
 alias prs='pnpm run storybook'
 alias plf='pnpm run lint-fix'
+alias ppw='pnpm prettier --write'
 alias pcs='pnpm changeset && gac -m "chore: add changeset" && gps'
 
 alias cc="cmake -B Builds -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER_LAUNCHER=sccache -DCMAKE_CXX_COMPILER_LAUNCHER=sccache -G Xcode -DCMAKE_OSX_ARCHITECTURES=\"$(uname -m)\" ."
@@ -103,7 +104,7 @@ alias gen=~/.scripts/gen-dl-link.sh
 
 alias werk='open /Applications/Zen.app;\
   open /Applications/Slack.app;\
-  open /Applications/Franz.app;\
+  open /Applications/Rambox.app;\
   open /Applications/Webex.app;\
   open /Applications/Citrix\ Workspace.app;\
   open /Applications/MacPass.app;\
@@ -111,7 +112,7 @@ alias werk='open /Applications/Zen.app;\
 
 alias otxo='open /Applications/Zen.app;\
   open /Applications/Discord.app;\
-  open /Applications/Franz.app;\
+  open /Applications/Rambox.app;\
   open /Users/cas/Source/otxo/Builds/otxo.xcodeproj;\
   ts otxo'
 
