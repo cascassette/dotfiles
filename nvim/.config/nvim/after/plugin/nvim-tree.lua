@@ -29,7 +29,7 @@ require('nvim-tree').setup({
       vim.keymap.set('n', '<Tab>', '<C-w>w', opts('Tab to next window'))
       vim.keymap.set('n', '<C-a>', ':q<CR>', opts('Close tree'))
       vim.keymap.set('n', '<Space>', api.node.open.preview, opts('Preview file'))
-      vim.keymap.set('n', 'o', function() api.node.open.edit() api.tree.close() end, opts('Open file and close the tree'))
+      vim.keymap.set('n', 'o', function() api.node.open.edit() api.tree.close() end, opts('Open file and close the tree view'))
    end,
 })
 
