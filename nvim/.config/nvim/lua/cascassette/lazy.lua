@@ -179,6 +179,7 @@ require('lazy').setup({
    --'ember-theme/nvim',
    'sainnhe/everforest',
    'nvim-mini/mini.statusline',
+   'f-person/auto-dark-mode.nvim',
 
    -- git
    'tpope/vim-fugitive',
